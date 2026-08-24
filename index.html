@@ -796,7 +796,58 @@
       }
 
     }
+.hero-photo-panel{
+  position:relative;
+  min-height:520px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:flex-end;
+  overflow:hidden;
+}
 
+.hero-profile-photo{
+  position:relative;
+  z-index:3;
+  width:min(430px,92%);
+  height:auto;
+  object-fit:contain;
+  filter:drop-shadow(0 18px 28px rgba(6,54,100,.13));
+}
+
+.hero-gold-circle{
+  position:absolute;
+  width:430px;
+  height:430px;
+  right:-40px;
+  top:10px;
+  border:2px solid rgba(207,154,40,.22);
+  border-radius:50%;
+  z-index:1;
+}
+
+.hero-photo-wave{
+  position:absolute;
+  left:5%;
+  right:0;
+  bottom:18px;
+  height:85px;
+  border-top:10px solid rgba(20,86,138,.18);
+  border-radius:50%;
+  transform:rotate(-3deg);
+  z-index:2;
+}
+
+.hero-photo-wave::after{
+  content:"";
+  position:absolute;
+  left:10%;
+  right:5%;
+  top:18px;
+  height:60px;
+  border-top:4px solid rgba(207,154,40,.35);
+  border-radius:50%;
+  transform:rotate(4deg);
+}
   </style>
 </head>
 
@@ -952,19 +1003,18 @@
 
 
 
-    <div class="signature-panel">
+    <div class="hero-photo-panel">
 
-      <div class="signature-inner">
+  <div class="hero-gold-circle"></div>
 
-        <div class="vertical-name">
-          鄭色幸
-        </div>
+  <img
+    src="profile-speaking.png"
+    alt="Se-Hsing Cheng 鄭色幸"
+    class="hero-profile-photo">
 
-        <div class="signature">
-          Dr. Cheng
-        </div>
+  <div class="hero-photo-wave"></div>
 
-      </div>
+</div>
 
     </div>
 
