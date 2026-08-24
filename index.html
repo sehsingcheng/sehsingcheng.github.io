@@ -8,10 +8,6 @@
 
 <style>
 
-/* ========================================
-   BASIC
-======================================== */
-
 *{
   box-sizing:border-box;
 }
@@ -50,21 +46,16 @@ header{
   height:84px;
   background:rgba(255,255,255,.96);
   border-bottom:1px solid rgba(199,154,66,.30);
-
   position:relative;
   z-index:50;
 }
 
 .nav{
   height:84px;
-
   display:flex;
   align-items:center;
   justify-content:space-between;
 }
-
-
-/* BRAND */
 
 .brand{
   display:flex;
@@ -78,7 +69,6 @@ header{
     "Noto Serif TC",
     "Microsoft JhengHei",
     serif;
-
   font-weight:700;
   font-size:18px;
   line-height:1.08;
@@ -103,9 +93,6 @@ header{
   color:#c79a42;
   font-style:italic;
 }
-
-
-/* NAVIGATION */
 
 nav{
   display:flex;
@@ -148,27 +135,21 @@ nav a:hover{
 
 .hero-inner{
   position:relative;
-
-  min-height:690px;
-
+  min-height:680px;
   display:grid;
-  grid-template-columns:44% 56%;
-
+  grid-template-columns:43% 57%;
   align-items:center;
 }
 
 
 /* ========================================
-   HERO LEFT — PHOTO
+   LEFT — PHOTO
 ======================================== */
 
 .hero-photo-side{
   position:relative;
-  height:610px;
+  height:600px;
 }
-
-
-/* GOLD RINGS */
 
 .gold-ring{
   position:absolute;
@@ -177,96 +158,83 @@ nav a:hover{
 }
 
 .gold-ring.one{
-  width:470px;
-  height:470px;
-
-  left:-95px;
-  top:42px;
-
-  border:1.5px solid rgba(199,154,66,.28);
+  width:500px;
+  height:500px;
+  left:-105px;
+  top:38px;
+  border:1.5px solid rgba(199,154,66,.21);
 }
 
 .gold-ring.two{
-  width:360px;
-  height:430px;
-
-  left:20px;
-  top:93px;
-
-  border:1px solid rgba(199,154,66,.12);
-
+  width:380px;
+  height:445px;
+  left:13px;
+  top:86px;
+  border:1px solid rgba(199,154,66,.08);
   transform:rotate(-13deg);
 }
 
-
-/* PHOTO */
-
 .photo-frame{
   position:absolute;
-
   left:0;
-  bottom:54px;
-
-  width:440px;
-  height:510px;
-
+  bottom:52px;
+  width:420px;
+  height:500px;
   z-index:6;
-
   overflow:hidden;
 
   border-radius:
-    46% 46% 17% 17%
-    / 18% 18% 8% 8%;
+    42% 42% 18% 18%
+    / 15% 15% 10% 10%;
 
   box-shadow:
-    0 24px 38px rgba(19,60,91,.10);
+    0 22px 40px rgba(20,59,88,.08);
 }
 
 .photo-frame img{
   width:100%;
   height:100%;
-
   object-fit:cover;
   object-position:58% center;
-
   display:block;
 }
 
-
-/*
-柔化照片四周，不用 mask，
-避免再次出現奇怪裁切
-*/
-
 .photo-frame::after{
   content:"";
-
   position:absolute;
   inset:0;
-
   pointer-events:none;
 
-  box-shadow:
-    inset 22px 0 28px rgba(248,251,253,.32),
-    inset -12px 0 22px rgba(248,251,253,.16),
-    inset 0 20px 20px rgba(248,251,253,.16);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(248,251,253,.16) 0%,
+      transparent 14%,
+      transparent 82%,
+      rgba(248,251,253,.30) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(248,251,253,.14) 0%,
+      transparent 15%,
+      transparent 88%,
+      rgba(248,251,253,.14) 100%
+    );
 }
 
 
-/* LANDSCAPE */
+/* ========================================
+   LANDSCAPE
+======================================== */
 
 .landscape{
   position:absolute;
-
-  left:-30px;
-  bottom:38px;
-
-  width:385px;
+  left:-20px;
+  bottom:33px;
+  width:350px;
   height:145px;
-
   z-index:2;
-
-  opacity:.11;
+  opacity:.055;
 }
 
 .landscape svg{
@@ -275,229 +243,179 @@ nav a:hover{
 }
 
 
-/* GINKGO */
+/* ========================================
+   GINKGO
+======================================== */
 
 .ginkgo{
   position:absolute;
-
   z-index:8;
-
-  left:34px;
-  bottom:42px;
-
+  left:28px;
+  bottom:50px;
   width:115px;
   height:125px;
-
-  opacity:.72;
+  opacity:.52;
+  transform:scale(.72);
+  transform-origin:bottom left;
 }
 
 .ginkgo-stem{
   position:absolute;
-
   width:2px;
   height:88px;
-
   left:55px;
   bottom:0;
-
   background:#c79a42;
-
   transform:rotate(23deg);
 }
 
 .ginkgo-leaf{
   position:absolute;
-
   width:47px;
   height:39px;
-
   border-radius:80% 15% 72% 22%;
 }
 
 .ginkgo-leaf.a{
   left:34px;
   top:17px;
-
   background:
     linear-gradient(
       135deg,
       #0c4e7e,
       #c79a42
     );
-
   transform:rotate(-20deg);
 }
 
 .ginkgo-leaf.b{
   left:59px;
   top:48px;
-
   width:40px;
   height:34px;
-
   background:
     linear-gradient(
       135deg,
       #c79a42,
       #e3c273
     );
-
   transform:rotate(31deg);
 }
 
 
 /* ========================================
-   HERO RIGHT — COPY
+   RIGHT — COPY
 ======================================== */
 
 .hero-copy{
   position:relative;
-
   z-index:10;
-
   padding:
-    82px 0
-    110px
-    72px;
+    78px 0
+    115px
+    38px;
 }
 
-
-/* KICKER */
-
 .kicker{
-  margin-bottom:20px;
-
+  margin-bottom:14px;
   color:#c79027;
-
   font-size:13px;
   font-weight:700;
-
   letter-spacing:4.5px;
 }
 
+.hero-identity{
+  margin-bottom:18px;
+  color:#6a7f91;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:2.5px;
+}
 
-/* MAIN NAME */
-
-.hero-title{
+.hero-slogan{
   margin:0;
+  max-width:690px;
 
   font-family:
     Georgia,
     "Times New Roman",
     serif;
 
+  font-size:
+    clamp(54px,5vw,76px);
+
+  line-height:1.04;
+  font-weight:700;
+  letter-spacing:-1.5px;
   color:#07345f;
-
-  font-size:82px;
-  line-height:.98;
-
-  white-space:nowrap;
 }
 
-.hero-title .dr{
+.hero-slogan span{
   color:#c79a42;
   font-style:italic;
 }
 
-
-.chinese-name{
-  margin-top:24px;
+.hero-slogan-cn{
+  margin-top:22px;
+  color:#07345f;
 
   font-family:
     "Noto Serif TC",
     "Microsoft JhengHei",
     serif;
 
-  font-size:28px;
-  font-weight:700;
-
-  color:#07345f;
-
-  letter-spacing:8px;
+  font-size:20px;
+  font-weight:600;
+  letter-spacing:2px;
 }
-
-.english-name{
-  margin-top:8px;
-
-  color:#60788d;
-
-  font-family:Georgia,serif;
-
-  font-size:16px;
-  letter-spacing:6px;
-}
-
-
-/* DESCRIPTION */
 
 .gold-divider{
   width:74px;
   height:2px;
-
-  margin:25px 0 21px;
-
+  margin:22px 0 21px;
   background:#c79a42;
 }
 
 .intro{
-  width:min(620px,100%);
-
+  width:min(590px,100%);
   margin:0;
-
   color:#385a72;
-
   font-size:16px;
-  line-height:2;
+  line-height:1.95;
 }
-
-
-/* TAGS */
 
 .tags{
   margin-top:25px;
-
   display:flex;
   flex-wrap:wrap;
-
   gap:9px;
 }
 
 .tags span{
   padding:8px 15px;
-
-  border:
-    1px solid rgba(199,154,66,.52);
-
+  border:1px solid rgba(199,154,66,.52);
   border-radius:30px;
-
-  background:
-    rgba(255,255,255,.67);
-
+  background:rgba(255,255,255,.67);
   color:#07345f;
-
   font-size:13px;
 }
-
-
-/* BUTTONS */
 
 .hero-actions{
   display:flex;
   gap:14px;
-
   margin-top:32px;
 }
 
 .button{
   display:inline-flex;
-
   align-items:center;
   justify-content:center;
-
   min-height:47px;
-
   padding:0 25px;
-
   font-weight:700;
   font-size:14px;
 }
@@ -521,26 +439,24 @@ nav a:hover{
 
 .quill{
   position:absolute;
-
-  right:5px;
-  top:48px;
-
+  right:-2px;
+  top:60px;
   width:67px;
   height:175px;
-
   z-index:2;
+  opacity:.34;
 
-  opacity:.45;
+  transform:
+    scale(.68)
+    rotate(18deg);
 
-  transform:rotate(18deg);
+  transform-origin:top right;
 }
 
 .quill-body{
   position:absolute;
-
   width:52px;
   height:132px;
-
   left:4px;
   top:0;
 
@@ -570,29 +486,21 @@ nav a:hover{
 
 .quill-body::after{
   content:"";
-
   position:absolute;
-
   left:25px;
   top:4px;
-
   width:2px;
   height:125px;
-
   background:#d4aa4a;
 }
 
 .quill-stem{
   position:absolute;
-
   width:4px;
   height:66px;
-
   left:34px;
   top:116px;
-
   background:#c79a42;
-
   transform:rotate(5deg);
 }
 
@@ -603,16 +511,12 @@ nav a:hover{
 
 .ai-network{
   position:absolute;
-
-  right:83px;
-  top:63px;
-
-  width:118px;
-  height:95px;
-
+  right:67px;
+  top:77px;
+  width:105px;
+  height:84px;
   z-index:1;
-
-  opacity:.18;
+  opacity:.11;
 }
 
 
@@ -622,64 +526,42 @@ nav a:hover{
 
 .book{
   position:absolute;
-
-  right:12px;
-  bottom:49px;
-
-  width:170px;
-  height:78px;
-
+  right:2px;
+  bottom:32px;
+  width:155px;
+  height:72px;
   z-index:3;
-
-  opacity:.42;
+  opacity:.32;
 }
 
 .page{
   position:absolute;
-
   bottom:0;
-
   width:52%;
   height:62px;
-
-  background:
-    rgba(255,255,255,.82);
-
-  border:
-    1.3px solid rgba(19,78,119,.40);
+  background:rgba(255,255,255,.82);
+  border:1.3px solid rgba(19,78,119,.40);
 }
 
 .page.left{
   left:0;
-
-  border-radius:
-    75% 14%
-    8% 18%;
-
+  border-radius:75% 14% 8% 18%;
   transform:rotate(-7deg);
 }
 
 .page.right{
   right:0;
-
-  border-radius:
-    14% 75%
-    18% 8%;
-
+  border-radius:14% 75% 18% 8%;
   transform:rotate(7deg);
 }
 
 .book::after{
   content:"";
-
   position:absolute;
-
   left:50%;
   bottom:0;
-
   width:2px;
   height:65px;
-
   background:#c79a42;
 }
 
@@ -690,77 +572,54 @@ nav a:hover{
 
 .hero-waves{
   position:absolute;
-
-  left:-6%;
-  right:-6%;
-  bottom:-38px;
-
-  height:145px;
-
+  left:-5%;
+  right:-5%;
+  bottom:-17px;
+  height:125px;
   z-index:5;
-
   pointer-events:none;
-
   overflow:hidden;
-
-  opacity:.80;
+  opacity:.72;
 }
 
 .wave{
   position:absolute;
-
   width:112%;
   left:-5%;
-
   border-radius:50%;
 }
 
 .wave.blue{
-  top:22px;
-
+  top:26px;
   height:120px;
-
-  border-top:
-    18px solid rgba(17,80,127,.34);
-
+  border-top:13px solid rgba(17,80,127,.28);
   transform:
     rotate(-1.5deg)
     skewX(-14deg);
 }
 
 .wave.light{
-  top:45px;
-
+  top:47px;
   height:95px;
-
-  border-top:
-    10px solid rgba(105,159,195,.20);
-
+  border-top:8px solid rgba(105,159,195,.18);
   transform:
     rotate(1.3deg)
     skewX(12deg);
 }
 
 .wave.gold{
-  top:67px;
-
+  top:63px;
   height:72px;
-
-  border-top:
-    5px solid rgba(199,154,66,.40);
-
+  border-top:4px solid rgba(199,154,66,.32);
   transform:
     rotate(-1deg)
     skewX(-8deg);
 }
 
 .wave.gold-thin{
-  top:79px;
-
+  top:74px;
   height:65px;
-
-  border-top:
-    1.5px solid rgba(199,154,66,.55);
+  border-top:1.5px solid rgba(199,154,66,.44);
 }
 
 
@@ -774,20 +633,15 @@ section.content{
 
 .section-kicker{
   color:#c79a42;
-
   font-size:12px;
   font-weight:700;
-
   letter-spacing:3px;
 }
 
 .section-title{
   margin:10px 0 28px;
-
   color:#07345f;
-
   font-family:Georgia,serif;
-
   font-size:38px;
 }
 
@@ -798,20 +652,14 @@ section.content{
 
 .cards{
   display:grid;
-
-  grid-template-columns:
-    repeat(3,1fr);
-
+  grid-template-columns:repeat(3,1fr);
   gap:20px;
 }
 
 .card{
   padding:28px;
-
   background:#f8fbfd;
-
   border-top:3px solid #c79a42;
-
   min-height:170px;
 }
 
@@ -831,16 +679,12 @@ section.content{
 
 .expertise-grid{
   display:grid;
-
-  grid-template-columns:
-    repeat(5,1fr);
-
+  grid-template-columns:repeat(5,1fr);
   gap:14px;
 }
 
 .expertise-item{
   min-height:185px;
-
   padding:25px 20px;
 
   background:
@@ -856,7 +700,6 @@ section.content{
 
 .number{
   color:#c79a42;
-
   font-family:Georgia,serif;
   font-size:28px;
 }
@@ -878,9 +721,7 @@ section.content{
 
 .contact-box{
   padding:45px;
-
   background:#07345f;
-
   color:white;
 }
 
@@ -896,15 +737,10 @@ section.content{
 
 footer{
   padding:28px 0;
-
   text-align:center;
-
   font-size:13px;
-
   color:#70869a;
-
-  border-top:
-    1px solid rgba(199,154,66,.25);
+  border-top:1px solid rgba(199,154,66,.25);
 }
 
 
@@ -912,36 +748,34 @@ footer{
    RESPONSIVE
 ======================================== */
 
+@media(max-width:1100px){
+
+  .hero-slogan{
+    font-size:58px;
+  }
+
+  .photo-frame{
+    width:390px;
+    height:475px;
+  }
+
+  .hero-copy{
+    padding-left:42px;
+  }
+
+}
+
 @media(max-width:1000px){
 
   nav{
     gap:16px;
   }
 
-  .hero-inner{
-    grid-template-columns:45% 55%;
-  }
-
-  .photo-frame{
-    width:390px;
-    height:485px;
-  }
-
-  .hero-copy{
-    padding-left:50px;
-  }
-
-  .hero-title{
-    font-size:68px;
-  }
-
   .expertise-grid{
-    grid-template-columns:
-      repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr);
   }
 
 }
-
 
 @media(max-width:780px){
 
@@ -960,7 +794,6 @@ footer{
   .hero-inner{
     display:flex;
     flex-direction:column;
-
     min-height:auto;
   }
 
@@ -971,25 +804,20 @@ footer{
 
   .photo-frame{
     left:50%;
-
     transform:translateX(-50%);
-
     width:350px;
     height:440px;
   }
 
   .gold-ring.one{
     left:50%;
-
     transform:translateX(-50%);
-
     width:410px;
     height:410px;
   }
 
   .gold-ring.two{
     left:50%;
-
     transform:
       translateX(-50%)
       rotate(-13deg);
@@ -997,14 +825,23 @@ footer{
 
   .hero-copy{
     width:100%;
-
     padding:
-      35px 0
-      135px;
+      30px 0
+      125px;
   }
 
-  .hero-title{
-    font-size:60px;
+  .hero-slogan{
+    font-size:48px;
+    line-height:1.08;
+  }
+
+  .hero-slogan-cn{
+    font-size:18px;
+  }
+
+  .hero-identity{
+    font-size:11px;
+    letter-spacing:1.7px;
   }
 
   .quill,
@@ -1022,7 +859,6 @@ footer{
 
 }
 
-
 @media(max-width:480px){
 
   .container{
@@ -1038,12 +874,8 @@ footer{
     height:450px;
   }
 
-  .hero-title{
-    font-size:51px;
-  }
-
-  .chinese-name{
-    font-size:23px;
+  .hero-slogan{
+    font-size:43px;
   }
 
   .hero-actions{
@@ -1114,15 +946,13 @@ footer{
   <div class="container hero-inner">
 
 
-    <!-- LEFT -->
+    <!-- LEFT PHOTO -->
 
     <div class="hero-photo-side">
-
 
       <div class="gold-ring one"></div>
 
       <div class="gold-ring two"></div>
-
 
       <div class="photo-frame">
 
@@ -1132,8 +962,6 @@ footer{
 
       </div>
 
-
-      <!-- GINKGO -->
 
       <div class="ginkgo">
 
@@ -1145,8 +973,6 @@ footer{
 
       </div>
 
-
-      <!-- LOCAL LANDSCAPE -->
 
       <div class="landscape">
 
@@ -1177,17 +1003,14 @@ footer{
 
       </div>
 
-
     </div>
 
 
 
-    <!-- RIGHT -->
+    <!-- RIGHT CONTENT -->
 
     <div class="hero-copy">
 
-
-      <!-- AI NETWORK -->
 
       <svg
         class="ai-network"
@@ -1215,7 +1038,6 @@ footer{
 
         </g>
 
-
         <g fill="#c79a42">
 
           <circle cx="23" cy="48" r="4"/>
@@ -1231,8 +1053,6 @@ footer{
 
       </svg>
 
-
-      <!-- FEATHER -->
 
       <div class="quill">
 
@@ -1250,23 +1070,25 @@ footer{
       </div>
 
 
-      <h1 class="hero-title">
+      <div class="hero-identity">
 
-        <span class="dr">Dr.</span> Cheng
-
-      </h1>
-
-
-      <div class="chinese-name">
-
-        鄭色幸
+        DR. CHENG · SE-HSING CHENG · 鄭色幸
 
       </div>
 
 
-      <div class="english-name">
+      <h1 class="hero-slogan">
 
-        SE-HSING CHENG
+        <span>Language Shapes</span>
+        <br>
+        How We See the World.
+
+      </h1>
+
+
+      <div class="hero-slogan-cn">
+
+        語言，形塑我們理解世界的方式。
 
       </div>
 
@@ -1321,8 +1143,6 @@ footer{
       </div>
 
 
-      <!-- BOOK -->
-
       <div class="book">
 
         <span class="page left"></span>
@@ -1335,8 +1155,6 @@ footer{
     </div>
 
 
-
-    <!-- WAVES -->
 
     <div class="hero-waves">
 
