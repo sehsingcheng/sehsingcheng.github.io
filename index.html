@@ -1,1570 +1,1822 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>鄭色幸｜Dr. Cheng｜Se-Hsing Cheng</title>
-
-  <meta name="description"
-    content="Academic website of Se-Hsing Cheng 鄭色幸. Chinese Language Education, Language Assessment, Chinese Literacy, AI-enhanced Language Education, Local Narrative, and Gender Equity.">
-
-  <style>
-    :root {
-      --navy: #0b355d;
-      --navy-deep: #082743;
-      --blue: #174f7d;
-      --blue-soft: #6d91b2;
-      --gold: #c89b3c;
-      --gold-soft: #e8d8ad;
-      --cream: #fcfaf5;
-      --paper: #fffdf8;
-      --text: #2f3b46;
-      --muted: #6e7880;
-      --line: rgba(200, 155, 60, 0.25);
-      --white: #ffffff;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      color: var(--text);
-      background: #fff;
-      font-family:
-        "Noto Sans TC",
-        "PingFang TC",
-        "Microsoft JhengHei",
-        Arial,
-        sans-serif;
-      line-height: 1.8;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: min(1160px, 90%);
-      margin: auto;
-    }
-
-    section {
-      position: relative;
-      padding: 88px 0;
-    }
-
-    /* =========================
-       NAV
-    ========================= */
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav {
-      min-height: 82px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .brand-cn {
-      writing-mode: vertical-rl;
-      font-family: "Noto Serif TC", "PMingLiU", serif;
-      color: var(--navy);
-      font-weight: 700;
-      letter-spacing: 4px;
-      font-size: 17px;
-      border-right: 1px solid var(--gold);
-      padding-right: 8px;
-      line-height: 1.1;
-    }
-
-    .brand-en {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--navy);
-      line-height: 1;
-    }
-
-    .brand-en span {
-      color: var(--gold);
-      font-style: italic;
-    }
-
-    .menu {
-      display: flex;
-      align-items: center;
-      gap: 26px;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--navy);
-    }
-
-    .menu a {
-      position: relative;
-      padding-bottom: 4px;
-    }
-
-    .menu a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 1px;
-      background: var(--gold);
-      transition: 0.25s;
-    }
-
-    .menu a:hover::after {
-      width: 100%;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      min-height: 760px;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 78% 22%, rgba(200,155,60,0.10), transparent 26%),
-        radial-gradient(circle at 84% 65%, rgba(23,79,125,0.09), transparent 30%),
-        linear-gradient(180deg, #fff 0%, #fffdf9 62%, #f8fbfd 100%);
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 620px;
-      height: 620px;
-      border: 2px solid rgba(200, 155, 60, 0.16);
-      border-radius: 50%;
-      right: -160px;
-      top: -150px;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      left: -5%;
-      right: -5%;
-      bottom: 0;
-      height: 125px;
-      background:
-        radial-gradient(ellipse at 25% 60%, rgba(23,79,125,0.13) 0%, transparent 48%),
-        radial-gradient(ellipse at 50% 72%, rgba(200,155,60,0.15) 0%, transparent 50%),
-        radial-gradient(ellipse at 75% 62%, rgba(23,79,125,0.10) 0%, transparent 46%);
-      transform: skewY(-2deg);
-      pointer-events: none;
-    }
-
-    .hero-grid {
-      position: relative;
-      z-index: 2;
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 70px;
-      align-items: center;
-    }
-
-    .hero-kicker {
-      color: var(--gold);
-      letter-spacing: 3px;
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-
-    .hero h1 {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      color: var(--navy);
-      font-size: clamp(58px, 7vw, 92px);
-      line-height: 0.98;
-      font-weight: 700;
-    }
-
-    .hero h1 span {
-      color: var(--gold);
-      font-style: italic;
-      margin-right: 8px;
-    }
-
-    .hero-name-cn {
-      margin-top: 22px;
-      font-family: "Noto Serif TC", "PMingLiU", serif;
-      color: var(--navy);
-      font-size: 30px;
-      font-weight: 700;
-      letter-spacing: 8px;
-    }
-
-    .hero-name-en {
-      margin-top: 4px;
-      font-family: Georgia, "Times New Roman", serif;
-      color: #546779;
-      letter-spacing: 6px;
-      font-size: 16px;
-    }
-
-    .hero-line {
-      width: 310px;
-      height: 2px;
-      margin: 24px 0;
-      background: linear-gradient(90deg, var(--gold), rgba(200,155,60,0.1));
-    }
-
-    .hero-lead {
-      max-width: 680px;
-      margin: 0;
-      color: #485866;
-      font-size: 17px;
-      line-height: 2;
-    }
-
-    .hero-slogan {
-      margin-top: 18px;
-      color: var(--navy);
-      font-family: Georgia, "Noto Serif TC", serif;
-      font-style: italic;
-      font-size: 19px;
-    }
-
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 28px;
-    }
-
-    .hero-tag {
-      padding: 7px 13px;
-      border: 1px solid var(--gold-soft);
-      border-radius: 30px;
-      background: rgba(255,255,255,0.78);
-      color: var(--navy);
-      font-size: 13px;
-    }
-
-    .hero-actions {
-      margin-top: 34px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 11px 22px;
-      border-radius: 2px;
-      font-size: 14px;
-      font-weight: 600;
-      transition: 0.25s;
-    }
-
-    .btn-primary {
-      background: var(--navy);
-      color: #fff;
-      border: 1px solid var(--navy);
-    }
-
-    .btn-primary:hover {
-      background: var(--blue);
-    }
-
-    .btn-secondary {
-      background: #fff;
-      color: var(--navy);
-      border: 1px solid var(--gold);
-    }
-
-    .btn-secondary:hover {
-      background: var(--cream);
-    }
-
-    /* =========================
-       HERO VISUAL
-    ========================= */
-
-    .hero-visual {
-      position: relative;
-      min-height: 500px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .vertical-name-wrap {
-      position: absolute;
-      left: 4%;
-      top: 14%;
-      z-index: 3;
-    }
-
-    .vertical-name {
-      writing-mode: vertical-rl;
-      font-family: "Noto Serif TC", "PMingLiU", serif;
-      color: var(--navy);
-      font-size: 48px;
-      font-weight: 700;
-      letter-spacing: 10px;
-      padding: 18px 10px;
-      border-left: 3px solid var(--gold);
-      border-radius: 50%;
-    }
-
-    .ink-circle {
-      position: absolute;
-      left: -30px;
-      top: -5px;
-      width: 175px;
-      height: 330px;
-      border-radius: 50%;
-      border-left: 8px solid rgba(11,53,93,0.82);
-      border-top: 6px solid rgba(200,155,60,0.72);
-      border-right: 5px solid rgba(200,155,60,0.32);
-      transform: rotate(5deg);
-      filter: blur(0.1px);
-    }
-
-    .quill {
-      position: absolute;
-      right: 8%;
-      top: 4%;
-      width: 120px;
-      height: 310px;
-      transform: rotate(18deg);
-    }
-
-    .quill-feather {
-      position: absolute;
-      top: 0;
-      left: 30px;
-      width: 70px;
-      height: 210px;
-      background: linear-gradient(145deg, var(--navy) 0%, #0f558c 70%, var(--gold) 100%);
-      border-radius: 60% 10% 60% 10%;
-      transform: skewX(-8deg);
-      box-shadow: inset -8px 0 0 rgba(255,255,255,0.06);
-    }
-
-    .quill-feather::after {
-      content: "";
-      position: absolute;
-      left: 34px;
-      top: 8px;
-      width: 2px;
-      height: 195px;
-      background: var(--gold);
-      transform: rotate(6deg);
-    }
-
-    .quill-stem {
-      position: absolute;
-      width: 6px;
-      height: 165px;
-      background: var(--gold);
-      left: 62px;
-      top: 185px;
-      border-radius: 6px;
-    }
-
-    .book {
-      position: absolute;
-      right: 1%;
-      bottom: 4%;
-      width: 380px;
-      height: 165px;
-    }
-
-    .page {
-      position: absolute;
-      bottom: 0;
-      width: 50%;
-      height: 130px;
-      background: linear-gradient(180deg, #fff 0%, #eef5f9 100%);
-      border: 2px solid rgba(23,79,125,0.26);
-      box-shadow: 0 10px 25px rgba(10,40,70,0.08);
-    }
-
-    .page-left {
-      left: 0;
-      border-radius: 80% 20% 5% 10%;
-      transform: rotate(-7deg);
-      transform-origin: bottom right;
-    }
-
-    .page-right {
-      right: 0;
-      border-radius: 20% 80% 10% 5%;
-      transform: rotate(7deg);
-      transform-origin: bottom left;
-    }
-
-    .book-center {
-      position: absolute;
-      left: 50%;
-      bottom: -3px;
-      width: 4px;
-      height: 135px;
-      background: var(--gold);
-      transform: translateX(-50%);
-    }
-
-    .ginkgo {
-      position: absolute;
-      right: 15%;
-      bottom: 27%;
-      width: 145px;
-      height: 180px;
-    }
-
-    .ginkgo::before,
-    .ginkgo::after {
-      content: "";
-      position: absolute;
-      bottom: 30px;
-      width: 72px;
-      height: 86px;
-      border-radius: 80% 20% 70% 30%;
-      background: linear-gradient(150deg, var(--navy) 0%, var(--gold) 100%);
-    }
-
-    .ginkgo::before {
-      left: 0;
-      transform: rotate(-25deg);
-    }
-
-    .ginkgo::after {
-      right: 0;
-      transform: rotate(25deg);
-    }
-
-    .ginkgo-stem {
-      position: absolute;
-      left: 50%;
-      bottom: 0;
-      width: 3px;
-      height: 95px;
-      background: var(--gold);
-      transform: translateX(-50%);
-    }
-
-    /* =========================
-       SECTION HEADING
-    ========================= */
-
-    .section-label {
-      color: var(--gold);
-      font-weight: 700;
-      font-size: 13px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-
-    .section-title {
-      margin: 0;
-      font-family: Georgia, "Noto Serif TC", serif;
-      color: var(--navy);
-      font-size: clamp(34px, 5vw, 48px);
-      line-height: 1.25;
-    }
-
-    .section-intro {
-      max-width: 760px;
-      margin-top: 16px;
-      color: var(--muted);
-      font-size: 16px;
-    }
-
-    .gold-rule {
-      width: 80px;
-      height: 2px;
-      background: var(--gold);
-      margin: 20px 0 0;
-    }
-
-    /* =========================
-       FIVE CORE AREAS
-    ========================= */
-
-    .expertise {
-      background: linear-gradient(180deg, #fff 0%, #fffdf8 100%);
-    }
-
-    .expertise-list {
-      margin-top: 48px;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .expertise-item {
-      display: grid;
-      grid-template-columns: 90px 1.2fr 1fr;
-      gap: 30px;
-      align-items: center;
-      padding: 28px 0;
-      border-bottom: 1px solid var(--line);
-      transition: 0.25s;
-    }
-
-    .expertise-item:hover {
-      padding-left: 10px;
-      background: rgba(200,155,60,0.03);
-    }
-
-    .expertise-no {
-      font-family: Georgia, serif;
-      color: var(--gold);
-      font-size: 15px;
-      letter-spacing: 2px;
-    }
-
-    .expertise-title-cn {
-      font-family: "Noto Serif TC", serif;
-      color: var(--navy);
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 3px;
-    }
-
-    .expertise-title-en {
-      color: var(--gold);
-      font-family: Georgia, serif;
-      font-size: 14px;
-      line-height: 1.4;
-    }
-
-    .expertise-desc {
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* =========================
-       ABOUT
-    ========================= */
-
-    .about {
-      background:
-        radial-gradient(circle at 15% 15%, rgba(200,155,60,0.07), transparent 28%),
-        #f8fbfd;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 0.7fr 1.3fr;
-      gap: 72px;
-      align-items: start;
-      margin-top: 46px;
-    }
-
-    .about-card {
-      background: var(--navy);
-      color: #fff;
-      padding: 40px;
-      position: sticky;
-      top: 110px;
-    }
-
-    .about-card .dr {
-      font-family: Georgia, serif;
-      color: var(--gold);
-      font-size: 68px;
-      line-height: 1;
-    }
-
-    .about-card h3 {
-      margin: 8px 0 4px;
-      font-size: 22px;
-      font-family: Georgia, "Noto Serif TC", serif;
-    }
-
-    .about-card .cn {
-      color: var(--gold-soft);
-      letter-spacing: 4px;
-      margin-bottom: 20px;
-    }
-
-    .about-card .position {
-      color: #d7e2ea;
-      font-size: 14px;
-      line-height: 1.8;
-    }
-
-    .about-text p {
-      margin-top: 0;
-      margin-bottom: 20px;
-      font-size: 16px;
-    }
-
-    .about-note {
-      margin-top: 30px;
-      padding-left: 20px;
-      border-left: 3px solid var(--gold);
-      color: var(--navy);
-      font-family: Georgia, "Noto Serif TC", serif;
-      font-style: italic;
-    }
-
-    /* =========================
-       EXPERIENCE
-    ========================= */
-
-    .experience {
-      background: #fff;
-    }
-
-    .timeline {
-      margin-top: 45px;
-      position: relative;
-      padding-left: 36px;
-      border-left: 1px solid var(--gold-soft);
-    }
-
-    .timeline-item {
-      position: relative;
-      margin-bottom: 36px;
-    }
-
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      left: -43px;
-      top: 7px;
-      width: 12px;
-      height: 12px;
-      background: var(--gold);
-      border-radius: 50%;
-      box-shadow: 0 0 0 4px #fff;
-    }
-
-    .timeline-eyebrow {
-      color: var(--gold);
-      font-size: 12px;
-      letter-spacing: 2px;
-      font-weight: 700;
-    }
-
-    .timeline-item h3 {
-      margin: 5px 0 4px;
-      color: var(--navy);
-      font-size: 19px;
-      font-family: "Noto Serif TC", serif;
-    }
-
-    .timeline-item p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* =========================
-       PROJECTS
-    ========================= */
-
-    .projects {
-      background: var(--navy);
-      color: #fff;
-      overflow: hidden;
-    }
-
-    .projects::before {
-      content: "";
-      position: absolute;
-      width: 400px;
-      height: 400px;
-      border: 1px solid rgba(200,155,60,0.16);
-      border-radius: 50%;
-      right: -120px;
-      top: -100px;
-    }
-
-    .projects .section-title {
-      color: #fff;
-    }
-
-    .projects .section-intro {
-      color: #c9d6df;
-    }
-
-    .projects-grid {
-      margin-top: 46px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .project {
-      padding: 30px;
-      border: 1px solid rgba(232,216,173,0.28);
-      background: rgba(255,255,255,0.035);
-    }
-
-    .project-tag {
-      color: var(--gold);
-      font-size: 12px;
-      letter-spacing: 2px;
-      font-weight: 700;
-    }
-
-    .project h3 {
-      margin: 10px 0;
-      font-family: "Noto Serif TC", serif;
-      font-size: 22px;
-    }
-
-    .project p {
-      color: #cfdae2;
-      font-size: 14px;
-      margin-bottom: 0;
-    }
-
-    /* =========================
-       PROFESSIONAL
-    ========================= */
-
-    .professional {
-      background: var(--paper);
-    }
-
-    .professional-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 34px;
-      margin-top: 46px;
-    }
-
-    .professional-box {
-      background: #fff;
-      border-top: 3px solid var(--gold);
-      padding: 32px;
-      box-shadow: 0 12px 34px rgba(11,53,93,0.05);
-    }
-
-    .professional-box h3 {
-      margin: 0 0 4px;
-      color: var(--navy);
-      font-family: Georgia, "Noto Serif TC", serif;
-      font-size: 21px;
-    }
-
-    .professional-box .sub {
-      color: var(--gold);
-      font-size: 14px;
-      margin-bottom: 16px;
-    }
-
-    .professional-box ul {
-      padding-left: 20px;
-      margin-bottom: 0;
-    }
-
-    .professional-box li {
-      margin-bottom: 8px;
-      color: var(--muted);
-    }
-
-    /* =========================
-       CONTACT
-    ========================= */
-
-    .contact {
-      text-align: center;
-      background:
-        radial-gradient(circle at center top, rgba(200,155,60,0.08), transparent 34%),
-        #fff;
-    }
-
-    .contact-name {
-      font-family: Georgia, "Noto Serif TC", serif;
-      color: var(--navy);
-      font-size: 44px;
-      margin: 0;
-    }
-
-    .contact-cn {
-      color: var(--gold);
-      font-family: "Noto Serif TC", serif;
-      font-size: 20px;
-      letter-spacing: 5px;
-      margin-top: 6px;
-    }
-
-    .contact-text {
-      color: var(--muted);
-      margin: 16px auto 0;
-      max-width: 640px;
-    }
-
-    .contact-actions {
-      margin-top: 28px;
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      background: var(--navy-deep);
-      color: #a9bdcb;
-      border-top: 2px solid var(--gold);
-      text-align: center;
-      padding: 24px;
-      font-size: 13px;
-    }
-
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media (max-width: 980px) {
-
-      .hero-grid,
-      .about-grid,
-      .professional-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-visual {
-        min-height: 400px;
-      }
-
-      .about-card {
-        position: static;
-      }
-
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .expertise-item {
-        grid-template-columns: 70px 1fr;
-      }
-
-      .expertise-desc {
-        grid-column: 2;
-      }
-    }
-
-    @media (max-width: 720px) {
-
-      section {
-        padding: 64px 0;
-      }
-
-      .menu {
-        display: none;
-      }
-
-      .brand-en {
-        font-size: 23px;
-      }
-
-      .hero {
-        min-height: auto;
-        padding: 80px 0 70px;
-      }
-
-      .hero h1 {
-        font-size: 56px;
-      }
-
-      .hero-visual {
-        display: none;
-      }
-
-      .expertise-item {
-        grid-template-columns: 48px 1fr;
-        gap: 14px;
-      }
-
-      .expertise-desc {
-        grid-column: 2;
-      }
-
-      .hero-name-cn {
-        font-size: 24px;
-        letter-spacing: 5px;
-      }
-    }
-
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>鄭色幸｜Dr. Cheng｜Se-Hsing Cheng</title>
+
+<meta name="description"
+content="鄭色幸 Dr. Cheng 個人學術網站。專業領域包括華語文教學與語言評量、中文素養與語文教育、AI融入語文教育、地方敘事與文學實踐、性別平等與調查專業。">
+
+<style>
+:root{
+  --navy:#063664;
+  --navy2:#0b4d82;
+  --blue:#1c679e;
+  --pale-blue:#dbeaf5;
+
+  --gold:#cf9a28;
+  --gold2:#e3b94d;
+  --pale-gold:#f3e7c6;
+
+  --text:#243d57;
+  --muted:#687b8d;
+  --white:#ffffff;
+}
+
+/* =========================
+   BASE
+========================= */
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:#fff;
+  color:var(--text);
+
+  font-family:
+  "Noto Sans TC",
+  "PingFang TC",
+  "Microsoft JhengHei",
+  Arial,
+  sans-serif;
+
+  line-height:1.8;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:min(1540px,94%);
+  margin:auto;
+}
+
+
+/* =========================
+   NAV
+========================= */
+
+header{
+  height:72px;
+  background:#fff;
+
+  display:flex;
+  align-items:center;
+
+  border-bottom:1px solid rgba(207,154,40,.35);
+}
+
+.nav{
+  width:min(1540px,94%);
+  margin:auto;
+
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+
+  gap:42px;
+}
+
+.nav a{
+  font-family:Georgia, "Times New Roman", serif;
+  color:var(--navy);
+  font-weight:700;
+  font-size:15px;
+  transition:.25s;
+}
+
+.nav a:hover{
+  color:var(--gold);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  background:#fff;
+  position:relative;
+  overflow:hidden;
+
+  min-height:830px;
+}
+
+.hero-inner{
+  width:min(1700px,98%);
+  margin:auto;
+
+  position:relative;
+
+  min-height:690px;
+}
+
+/* =========================
+   LEFT VERTICAL TEXT
+========================= */
+
+.side-motto{
+  position:absolute;
+
+  left:2.3%;
+  top:85px;
+
+  writing-mode:vertical-rl;
+
+  color:var(--navy);
+
+  font-family:
+  "Noto Serif TC",
+  "PMingLiU",
+  serif;
+
+  letter-spacing:4px;
+
+  font-size:16px;
+  line-height:1.8;
+
+  border-right:1px solid var(--gold);
+
+  padding-right:12px;
+}
+
+.side-motto span{
+  color:var(--gold);
+}
+
+
+/* =========================
+   INK RING
+========================= */
+
+.identity{
+  position:absolute;
+
+  left:8.5%;
+  top:62px;
+
+  width:330px;
+  height:470px;
+}
+
+.ink-ring{
+  position:absolute;
+
+  left:0;
+  top:0;
+
+  width:285px;
+  height:450px;
+
+  border-radius:50%;
+  transform:rotate(-6deg);
+}
+
+.ink-ring::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  border-radius:50%;
+
+  border-top:12px solid var(--gold);
+  border-left:7px solid var(--gold);
+
+  border-right:7px solid transparent;
+  border-bottom:5px solid transparent;
+
+  transform:rotate(10deg);
+
+  opacity:.95;
+}
+
+.ink-ring::after{
+  content:"";
+
+  position:absolute;
+
+  left:12px;
+  top:12px;
+
+  width:265px;
+  height:430px;
+
+  border-radius:50%;
+
+  border-left:12px solid var(--navy);
+  border-bottom:8px solid var(--navy);
+
+  border-top:6px solid transparent;
+  border-right:5px solid transparent;
+
+  transform:rotate(-10deg);
+
+  opacity:.9;
+}
+
+.vertical-name{
+  position:absolute;
+
+  left:76px;
+  top:42px;
+
+  writing-mode:vertical-rl;
+
+  font-family:
+  "DFKai-SB",
+  "BiauKai",
+  "Noto Serif TC",
+  serif;
+
+  font-size:62px;
+  font-weight:700;
+
+  letter-spacing:3px;
+
+  color:var(--navy);
+
+  z-index:3;
+}
+
+
+/* =========================
+   MAIN BRAND
+========================= */
+
+.brand-center{
+  position:absolute;
+
+  left:29%;
+  top:115px;
+
+  width:47%;
+
+  text-align:center;
+
+  z-index:4;
+}
+
+.drcheng{
+  margin:0;
+
+  font-family:
+  Georgia,
+  "Times New Roman",
+  serif;
+
+  font-size:clamp(68px,8vw,138px);
+
+  line-height:.95;
+
+  font-weight:700;
+
+  color:var(--navy);
+
+  white-space:nowrap;
+}
+
+.drcheng .dr{
+  color:var(--gold);
+  font-style:italic;
+}
+
+.brand-swoosh{
+  width:78%;
+  height:12px;
+
+  margin:14px auto 17px;
+
+  position:relative;
+}
+
+.brand-swoosh::after{
+  content:"";
+
+  display:block;
+
+  width:100%;
+  height:5px;
+
+  border-radius:50%;
+
+  background:
+  linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--gold) 14%,
+    var(--gold2) 58%,
+    var(--gold) 86%,
+    transparent 100%
+  );
+
+  transform:rotate(-1deg);
+}
+
+.name-en{
+  font-family:
+  Georgia,
+  "Times New Roman",
+  serif;
+
+  color:var(--navy);
+
+  font-size:21px;
+
+  letter-spacing:9px;
+
+  font-weight:600;
+}
+
+.theme-en{
+  margin-top:13px;
+
+  color:var(--navy);
+
+  font-family:
+  Georgia,
+  serif;
+
+  font-size:15px;
+
+  letter-spacing:5px;
+}
+
+.theme-en span{
+  color:var(--gold);
+  margin:0 10px;
+}
+
+.signature{
+  margin-top:19px;
+
+  font-family:
+  "Brush Script MT",
+  "Segoe Script",
+  cursive;
+
+  font-style:italic;
+
+  color:var(--navy);
+
+  font-size:25px;
+}
+
+
+/* =========================
+   RIGHT ILLUSTRATION AREA
+========================= */
+
+.art-right{
+  position:absolute;
+
+  right:1%;
+  top:24px;
+
+  width:38%;
+  height:560px;
+
+  pointer-events:none;
+}
+
+
+/* FEATHER */
+.feather{
+  position:absolute;
+
+  right:24%;
+  top:0;
+
+  width:130px;
+  height:300px;
+
+  transform:rotate(18deg);
+}
+
+.feather-body{
+  position:absolute;
+
+  width:82px;
+  height:220px;
+
+  left:20px;
+  top:0;
+
+  background:
+  linear-gradient(
+    145deg,
+    #052d59 0%,
+    #0b4f85 58%,
+    #0a3868 78%,
+    var(--gold) 100%
+  );
+
+  clip-path:
+  polygon(
+    52% 0%,
+    92% 12%,
+    100% 36%,
+    92% 62%,
+    62% 92%,
+    43% 100%,
+    30% 80%,
+    8% 57%,
+    0% 30%,
+    18% 10%
+  );
+}
+
+.feather-body::after{
+  content:"";
+
+  position:absolute;
+
+  left:42px;
+  top:5px;
+
+  width:3px;
+  height:220px;
+
+  background:var(--gold);
+
+  transform:rotate(5deg);
+}
+
+.feather-stem{
+  position:absolute;
+
+  left:62px;
+  top:205px;
+
+  width:7px;
+  height:115px;
+
+  border-radius:8px;
+
+  background:
+  linear-gradient(
+    var(--gold),
+    #a66e12
+  );
+}
+
+
+/* NETWORK BRAIN */
+.network{
+  position:absolute;
+
+  right:3%;
+  top:105px;
+
+  width:135px;
+  height:110px;
+}
+
+.network svg{
+  width:100%;
+  height:100%;
+}
+
+
+/* DIGITAL PIXELS */
+.pixels{
+  position:absolute;
+
+  right:27%;
+  top:250px;
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(3,10px);
+
+  gap:6px;
+
+  transform:rotate(2deg);
+}
+
+.pixels i{
+  width:10px;
+  height:10px;
+
+  background:var(--blue);
+
+  opacity:.75;
+}
+
+
+/* GINKGO */
+.ginkgo{
+  position:absolute;
+
+  right:20%;
+  bottom:50px;
+
+  width:190px;
+  height:250px;
+}
+
+.ginkgo-stem{
+  position:absolute;
+
+  left:92px;
+  top:78px;
+
+  width:4px;
+  height:170px;
+
+  background:var(--gold);
+}
+
+.leaf{
+  position:absolute;
+
+  width:86px;
+  height:72px;
+
+  border-radius:
+  75% 15%
+  75% 20%;
+
+  transform-origin:bottom center;
+}
+
+.leaf1{
+  left:30px;
+  top:28px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #0b3a68,
+    #145d91,
+    var(--gold)
+  );
+
+  transform:rotate(-27deg);
+}
+
+.leaf2{
+  right:7px;
+  top:74px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #0c4f83,
+    #063866,
+    #c49a43
+  );
+
+  transform:rotate(27deg);
+}
+
+.leaf3{
+  left:3px;
+  top:115px;
+
+  width:62px;
+  height:55px;
+
+  background:
+  linear-gradient(
+    135deg,
+    var(--gold2),
+    var(--gold)
+  );
+
+  transform:rotate(-40deg);
+}
+
+
+/* LANDSCAPE */
+.landscape{
+  position:absolute;
+
+  right:-2%;
+  bottom:32px;
+
+  width:315px;
+  height:175px;
+
+  opacity:.55;
+}
+
+.mountain{
+  position:absolute;
+
+  left:0;
+  right:0;
+  bottom:30px;
+
+  height:130px;
+
+  background:
+  linear-gradient(
+    180deg,
+    rgba(207,228,241,.2),
+    rgba(62,126,172,.18)
+  );
+
+  clip-path:
+  polygon(
+    0 100%,
+    10% 70%,
+    22% 75%,
+    34% 49%,
+    47% 68%,
+    61% 38%,
+    75% 65%,
+    87% 47%,
+    100% 100%
+  );
+}
+
+.bridge{
+  position:absolute;
+
+  right:18px;
+  top:72px;
+
+  color:var(--navy);
+
+  font-size:46px;
+
+  opacity:.55;
+}
+
+.river{
+  position:absolute;
+
+  right:20px;
+  bottom:0;
+
+  width:210px;
+  height:80px;
+
+  border-radius:60%;
+
+  border-left:
+  15px solid rgba(83,145,188,.25);
+
+  transform:rotate(-12deg);
+}
+
+
+/* =========================
+   OPEN BOOK
+========================= */
+
+.book{
+  position:absolute;
+
+  right:4%;
+
+  top:380px;
+
+  width:390px;
+  height:190px;
+
+  z-index:3;
+}
+
+.book-left,
+.book-right{
+  position:absolute;
+
+  bottom:0;
+
+  width:52%;
+  height:140px;
+
+  border:
+  3px solid rgba(11,65,112,.6);
+
+  background:
+  linear-gradient(
+    180deg,
+    #fff 0%,
+    #eef5fa 65%,
+    #dcebf4 100%
+  );
+
+  box-shadow:
+  0 10px 24px
+  rgba(0,45,80,.10);
+}
+
+.book-left{
+  left:0;
+
+  border-radius:
+  80% 15%
+  5% 20%;
+
+  transform:
+  rotate(-8deg);
+
+  transform-origin:
+  bottom right;
+}
+
+.book-right{
+  right:0;
+
+  border-radius:
+  15% 80%
+  20% 5%;
+
+  transform:
+  rotate(8deg);
+
+  transform-origin:
+  bottom left;
+}
+
+.book-left::before,
+.book-right::before{
+  content:"";
+
+  position:absolute;
+
+  inset:14px 10px;
+
+  border-top:
+  2px solid rgba(207,154,40,.35);
+
+  border-bottom:
+  2px solid rgba(6,54,100,.10);
+}
+
+.book-center{
+  position:absolute;
+
+  left:50%;
+  bottom:0;
+
+  width:5px;
+  height:148px;
+
+  transform:
+  translateX(-50%);
+
+  background:
+  var(--gold);
+}
+
+
+/* =========================
+   WAVES
+========================= */
+
+.waves{
+  position:absolute;
+
+  left:0;
+  right:0;
+
+  top:520px;
+
+  height:175px;
+
+  overflow:hidden;
+
+  z-index:2;
+}
+
+.wave{
+  position:absolute;
+
+  left:-5%;
+  width:110%;
+
+  border-radius:50%;
+}
+
+.wave1{
+  top:25px;
+
+  height:100px;
+
+  border-top:
+  35px solid
+  rgba(11,74,123,.80);
+
+  transform:
+  rotate(-2deg)
+  skewX(-18deg);
+}
+
+.wave2{
+  top:55px;
+
+  height:80px;
+
+  border-top:
+  23px solid
+  rgba(93,153,195,.33);
+
+  transform:
+  rotate(2deg)
+  skewX(15deg);
+}
+
+.wave3{
+  top:70px;
+
+  height:70px;
+
+  border-top:
+  17px solid
+  rgba(207,154,40,.38);
+
+  transform:
+  rotate(-1deg)
+  skewX(-12deg);
+}
+
+.wave4{
+  top:91px;
+
+  height:55px;
+
+  border-top:
+  3px solid
+  var(--gold);
+
+  transform:
+  rotate(1deg);
+}
+
+
+/* =========================
+   MISSION
+========================= */
+
+.mission{
+  position:absolute;
+
+  left:21%;
+  right:21%;
+
+  top:685px;
+
+  text-align:center;
+
+  color:var(--navy);
+
+  font-size:15px;
+
+  line-height:2;
+}
+
+
+/* =========================
+   FIVE AREAS
+========================= */
+
+.core{
+  padding:
+  20px 3%
+  45px;
+
+  background:#fff;
+}
+
+.core-grid{
+  max-width:1670px;
+  margin:auto;
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(5,1fr);
+}
+
+.core-item{
+  position:relative;
+
+  min-height:120px;
+
+  padding:
+  8px 28px;
+
+  border-right:
+  1px solid rgba(207,154,40,.45);
+}
+
+.core-item:last-child{
+  border-right:0;
+}
+
+.core-top{
+  display:flex;
+  gap:15px;
+  align-items:flex-start;
+}
+
+.core-no{
+  color:var(--gold);
+
+  font-family:
+  Georgia,
+  serif;
+
+  font-size:29px;
+
+  font-style:italic;
+
+  line-height:1;
+}
+
+.core-title{
+  color:var(--navy);
+
+  font-family:
+  "Noto Serif TC",
+  serif;
+
+  font-weight:700;
+
+  font-size:15px;
+
+  line-height:1.4;
+}
+
+.core-en{
+  margin:
+  7px 0 0 45px;
+
+  color:var(--navy);
+
+  font-family:
+  Georgia,
+  serif;
+
+  font-size:12px;
+
+  line-height:1.6;
+}
+
+.core-line{
+  width:28px;
+  height:2px;
+
+  margin:
+  13px 0 0 45px;
+
+  background:var(--gold);
+}
+
+
+/* =========================
+   CONTENT SECTIONS
+========================= */
+
+.content-section{
+  padding:
+  95px 0;
+
+  border-top:
+  1px solid
+  rgba(207,154,40,.18);
+}
+
+.content-section:nth-child(even){
+  background:#fcfaf6;
+}
+
+.content{
+  width:min(1080px,88%);
+  margin:auto;
+}
+
+.eyebrow{
+  color:var(--gold);
+
+  font-size:12px;
+
+  font-weight:700;
+
+  letter-spacing:3px;
+}
+
+.content h2{
+  margin:
+  5px 0 20px;
+
+  color:var(--navy);
+
+  font-family:
+  Georgia,
+  "Noto Serif TC",
+  serif;
+
+  font-size:40px;
+}
+
+.content p{
+  color:var(--muted);
+  font-size:16px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1100px){
+
+  .hero{
+    min-height:880px;
+  }
+
+  .identity{
+    transform:
+    scale(.78);
+
+    transform-origin:
+    top left;
+  }
+
+  .brand-center{
+    left:24%;
+    width:54%;
+  }
+
+  .art-right{
+    opacity:.88;
+  }
+
+  .core-grid{
+    grid-template-columns:
+    repeat(2,1fr);
+  }
+
+  .core-item{
+    border-bottom:
+    1px solid
+    rgba(207,154,40,.25);
+  }
+
+}
+
+@media(max-width:760px){
+
+  header{
+    height:58px;
+  }
+
+  .nav{
+    justify-content:center;
+    gap:14px;
+  }
+
+  .nav a{
+    font-size:11px;
+  }
+
+  .hero{
+    min-height:870px;
+  }
+
+  .side-motto{
+    display:none;
+  }
+
+  .identity{
+    left:3%;
+    top:30px;
+
+    transform:
+    scale(.55);
+  }
+
+  .brand-center{
+    left:12%;
+    top:280px;
+
+    width:76%;
+  }
+
+  .drcheng{
+    font-size:60px;
+  }
+
+  .name-en{
+    font-size:14px;
+    letter-spacing:5px;
+  }
+
+  .theme-en{
+    font-size:10px;
+    letter-spacing:2px;
+  }
+
+  .signature{
+    font-size:20px;
+  }
+
+  .art-right{
+    top:470px;
+    right:2%;
+
+    width:62%;
+    height:300px;
+
+    transform:
+    scale(.68);
+
+    transform-origin:
+    top right;
+  }
+
+  .book{
+    top:590px;
+
+    width:250px;
+    height:120px;
+  }
+
+  .waves{
+    top:665px;
+  }
+
+  .mission{
+    top:760px;
+    left:7%;
+    right:7%;
+
+    font-size:13px;
+  }
+
+  .core-grid{
+    grid-template-columns:1fr;
+  }
+
+  .core-item{
+    border-right:0;
+  }
+
+}
+
+</style>
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     NAV
+========================= -->
+
 <header>
-  <div class="container nav">
 
-    <a class="brand" href="#home">
-      <div class="brand-cn">鄭色幸</div>
-      <div class="brand-en"><span>Dr.</span> Cheng</div>
-    </a>
+<nav class="nav">
 
-    <nav class="menu">
-      <a href="#about">About</a>
-      <a href="#expertise">Expertise</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#professional">Professional</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <a href="#about">About</a>
 
-  </div>
+  <a href="#expertise">Expertise</a>
+
+  <a href="#experience">Experience</a>
+
+  <a href="#projects">Projects</a>
+
+  <a href="#professional">Professional</a>
+
+  <a href="#contact">Contact</a>
+
+</nav>
+
 </header>
 
 
-<section class="hero" id="home">
+<!-- =========================
+     HERO
+========================= -->
 
-  <div class="container hero-grid">
+<section class="hero">
 
-    <div>
-
-      <div class="hero-kicker">
-        LANGUAGE · ASSESSMENT · EDUCATION
-      </div>
-
-      <h1>
-        <span>Dr.</span>Cheng
-      </h1>
-
-      <div class="hero-name-cn">
-        鄭色幸
-      </div>
-
-      <div class="hero-name-en">
-        SE-HSING CHENG
-      </div>
-
-      <div class="hero-line"></div>
-
-      <p class="hero-lead">
-        以語文教育為核心，從華語文教學、師資培育與語言評量，
-        延伸至中文素養、AI融入語文教育、地方敘事與性別平等專業。
-        致力於連結語言、教育、人文與社會實踐。
-      </p>
-
-      <div class="hero-slogan">
-        Writing, Teaching, Inspiring.
-      </div>
-
-      <div class="hero-tags">
-        <span class="hero-tag">華語文教育</span>
-        <span class="hero-tag">語言評量</span>
-        <span class="hero-tag">中文素養</span>
-        <span class="hero-tag">AI語文教育</span>
-        <span class="hero-tag">地方敘事</span>
-        <span class="hero-tag">性別平等</span>
-      </div>
-
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#expertise">
-          Explore My Work
-        </a>
-
-        <a class="btn btn-secondary" href="#contact">
-          Contact
-        </a>
-      </div>
-
-    </div>
+<div class="hero-inner">
 
 
-    <div class="hero-visual">
+<!-- LEFT VERTICAL MOTTO -->
 
-      <div class="vertical-name-wrap">
-        <div class="ink-circle"></div>
-        <div class="vertical-name">
-          鄭色幸
-        </div>
-      </div>
+<div class="side-motto">
 
-      <div class="quill">
-        <div class="quill-feather"></div>
-        <div class="quill-stem"></div>
-      </div>
+語文教育
 
-      <div class="ginkgo">
-        <div class="ginkgo-stem"></div>
-      </div>
+<span>•</span>
 
-      <div class="book">
-        <div class="page page-left"></div>
-        <div class="page page-right"></div>
-        <div class="book-center"></div>
-      </div>
+人文創新
 
-    </div>
+<span>•</span>
+
+地方書寫
+
+</div>
+
+
+<!-- INK CIRCLE / NAME -->
+
+<div class="identity">
+
+  <div class="ink-ring"></div>
+
+  <div class="vertical-name">
+    鄭色幸
+  </div>
+
+</div>
+
+
+<!-- CENTER BRAND -->
+
+<div class="brand-center">
+
+  <h1 class="drcheng">
+
+    <span class="dr">
+      Dr.
+    </span>
+
+    Cheng
+
+  </h1>
+
+
+  <div class="brand-swoosh">
+  </div>
+
+
+  <div class="name-en">
+
+    SEHSING CHENG
 
   </div>
+
+
+  <div class="theme-en">
+
+    LANGUAGE
+
+    <span>•</span>
+
+    EDUCATION
+
+    <span>•</span>
+
+    INNOVATION
+
+  </div>
+
+
+  <div class="signature">
+
+    Writing, Teaching, Inspiring.
+
+  </div>
+
+</div>
+
+
+<!-- RIGHT ART -->
+
+<div class="art-right">
+
+
+<!-- Feather -->
+
+<div class="feather">
+
+  <div class="feather-body">
+  </div>
+
+  <div class="feather-stem">
+  </div>
+
+</div>
+
+
+<!-- Brain network -->
+
+<div class="network">
+
+<svg
+viewBox="0 0 140 110">
+
+<g
+stroke="#cf9a28"
+stroke-width="1.6"
+fill="none">
+
+<line x1="21" y1="41" x2="46" y2="22"/>
+<line x1="46" y1="22" x2="75" y2="18"/>
+<line x1="75" y1="18" x2="105" y2="32"/>
+<line x1="105" y1="32" x2="117" y2="58"/>
+<line x1="117" y1="58" x2="99" y2="82"/>
+<line x1="99" y1="82" x2="67" y2="88"/>
+<line x1="67" y1="88" x2="38" y2="72"/>
+<line x1="38" y1="72" x2="21" y2="41"/>
+
+<line x1="46" y1="22" x2="38" y2="72"/>
+<line x1="46" y1="22" x2="67" y2="88"/>
+<line x1="75" y1="18" x2="67" y2="88"/>
+<line x1="75" y1="18" x2="117" y2="58"/>
+<line x1="105" y1="32" x2="67" y2="88"/>
+<line x1="38" y1="72" x2="99" y2="82"/>
+<line x1="21" y1="41" x2="105" y2="32"/>
+
+</g>
+
+
+<g fill="#cf9a28">
+
+<circle cx="21" cy="41" r="4"/>
+<circle cx="46" cy="22" r="4"/>
+<circle cx="75" cy="18" r="4"/>
+<circle cx="105" cy="32" r="4"/>
+<circle cx="117" cy="58" r="4"/>
+<circle cx="99" cy="82" r="4"/>
+<circle cx="67" cy="88" r="4"/>
+<circle cx="38" cy="72" r="4"/>
+
+</g>
+
+</svg>
+
+</div>
+
+
+<!-- Pixels -->
+
+<div class="pixels">
+
+<i></i>
+<i></i>
+<i></i>
+
+<i></i>
+<i></i>
+<i></i>
+
+</div>
+
+
+<!-- Ginkgo -->
+
+<div class="ginkgo">
+
+<div class="ginkgo-stem">
+</div>
+
+<div class="leaf leaf1">
+</div>
+
+<div class="leaf leaf2">
+</div>
+
+<div class="leaf leaf3">
+</div>
+
+</div>
+
+
+<!-- Landscape -->
+
+<div class="landscape">
+
+<div class="mountain">
+</div>
+
+<div class="bridge">
+亭
+</div>
+
+<div class="river">
+</div>
+
+</div>
+
+
+</div>
+
+
+<!-- OPEN BOOK -->
+
+<div class="book">
+
+  <div class="book-left">
+  </div>
+
+  <div class="book-right">
+  </div>
+
+  <div class="book-center">
+  </div>
+
+</div>
+
+
+<!-- WAVES -->
+
+<div class="waves">
+
+<div class="wave wave1">
+</div>
+
+<div class="wave wave2">
+</div>
+
+<div class="wave wave3">
+</div>
+
+<div class="wave wave4">
+</div>
+
+</div>
+
+
+<!-- MISSION -->
+
+<div class="mission">
+
+以語文教育為核心，從華語文教學、師資培育與語言評量，
+延伸至中文素養、AI融入語文教育、地方敘事與性別平等專業。
+致力於連結語言、教育、人文與社會實踐。
+
+</div>
+
+
+</div>
 
 </section>
 
 
-<section class="expertise" id="expertise">
+<!-- =========================
+     FIVE AREAS
+========================= -->
 
-  <div class="container">
+<section class="core"
+         id="expertise">
 
-    <div class="section-label">
-      Core Expertise
-    </div>
-
-    <h2 class="section-title">
-      五大專業主軸
-    </h2>
-
-    <div class="gold-rule"></div>
-
-    <p class="section-intro">
-      我的專業歷程並非單純依照「教學、研究、服務」切割，
-      而是由五條長期發展、彼此連結的專業主軸所構成。
-    </p>
+<div class="core-grid">
 
 
-    <div class="expertise-list">
+<!-- 01 -->
+
+<div class="core-item">
+
+<div class="core-top">
+
+<div class="core-no">
+01
+</div>
+
+<div class="core-title">
+
+華語文教學與語言評量
+
+</div>
+
+</div>
+
+<div class="core-en">
+
+Chinese Language Education
+<br>
+& Language Assessment
+
+</div>
+
+<div class="core-line">
+</div>
+
+</div>
 
 
-      <div class="expertise-item">
+<!-- 02 -->
 
-        <div class="expertise-no">
-          01
-        </div>
+<div class="core-item">
 
-        <div>
-          <div class="expertise-title-cn">
-            華語文教學與語言評量
-          </div>
+<div class="core-top">
 
-          <div class="expertise-title-en">
-            Chinese Language Education & Language Assessment
-          </div>
-        </div>
+<div class="core-no">
+02
+</div>
 
-        <div class="expertise-desc">
-          華語文教學、海外華文師資培訓、華語師資培育、
-          華語能力測驗命題與審題、教材與課程設計。
-        </div>
+<div class="core-title">
 
-      </div>
+中文素養與語文教育
 
+</div>
 
-      <div class="expertise-item">
+</div>
 
-        <div class="expertise-no">
-          02
-        </div>
+<div class="core-en">
 
-        <div>
-          <div class="expertise-title-cn">
-            中文素養與語文教育
-          </div>
+Chinese Literacy &
+<br>
+Language Education
 
-          <div class="expertise-title-en">
-            Chinese Literacy & Language Education
-          </div>
-        </div>
+</div>
 
-        <div class="expertise-desc">
-          中文閱讀與寫作能力、CWT中文素養評量、
-          學習成效分析、應用中文與大專語文教育。
-        </div>
+<div class="core-line">
+</div>
 
-      </div>
+</div>
 
 
-      <div class="expertise-item">
+<!-- 03 -->
 
-        <div class="expertise-no">
-          03
-        </div>
+<div class="core-item">
 
-        <div>
-          <div class="expertise-title-cn">
-            AI融入語文教育
-          </div>
+<div class="core-top">
 
-          <div class="expertise-title-en">
-            AI-enhanced Language Education
-          </div>
-        </div>
+<div class="core-no">
+03
+</div>
 
-        <div class="expertise-desc">
-          生成式AI融入語文課程、AI輔助學習、
-          任務導向教學、數位敘事與創新評量。
-        </div>
+<div class="core-title">
 
-      </div>
+AI融入語文教育
 
+</div>
 
-      <div class="expertise-item">
+</div>
 
-        <div class="expertise-no">
-          04
-        </div>
+<div class="core-en">
 
-        <div>
-          <div class="expertise-title-cn">
-            地方敘事與文學實踐
-          </div>
+AI-enhanced
+<br>
+Language Education
 
-          <div class="expertise-title-en">
-            Local Narrative & Literary Practice
-          </div>
-        </div>
+</div>
 
-        <div class="expertise-desc">
-          虎尾溪文學獎、地方文化書寫、文學推廣、
-          作品集編輯與學生創作實踐。
-        </div>
+<div class="core-line">
+</div>
 
-      </div>
+</div>
 
 
-      <div class="expertise-item">
+<!-- 04 -->
 
-        <div class="expertise-no">
-          05
-        </div>
+<div class="core-item">
 
-        <div>
-          <div class="expertise-title-cn">
-            性別平等與調查專業
-          </div>
+<div class="core-top">
 
-          <div class="expertise-title-en">
-            Gender Equity & Investigation
-          </div>
-        </div>
+<div class="core-no">
+04
+</div>
 
-        <div class="expertise-desc">
-          校園性別事件調查、性別平等教育專業訓練、
-          調查實務與教育專業服務。
-        </div>
+<div class="core-title">
 
-      </div>
+地方敘事與文學實踐
+
+</div>
+
+</div>
+
+<div class="core-en">
+
+Local Narrative &
+<br>
+Literary Practice
+
+</div>
+
+<div class="core-line">
+</div>
+
+</div>
 
 
-    </div>
+<!-- 05 -->
 
-  </div>
+<div class="core-item">
+
+<div class="core-top">
+
+<div class="core-no">
+05
+</div>
+
+<div class="core-title">
+
+性別平等與調查專業
+
+</div>
+
+</div>
+
+<div class="core-en">
+
+Gender Equity &
+<br>
+Investigation
+
+</div>
+
+<div class="core-line">
+</div>
+
+</div>
+
+
+</div>
 
 </section>
 
 
-<section class="about" id="about">
+<!-- =========================
+     ABOUT
+========================= -->
 
-  <div class="container">
+<section
+class="content-section"
+id="about">
 
-    <div class="section-label">
-      About
-    </div>
+<div class="content">
 
-    <h2 class="section-title">
-      關於我
-    </h2>
+<div class="eyebrow">
+ABOUT
+</div>
 
-    <div class="gold-rule"></div>
+<h2>
+關於我
+</h2>
 
+<p>
 
-    <div class="about-grid">
+以語文教育為核心，
+專業歷程涵蓋華語文教學、
+海外華文教師研習、
+華語文師資培育、
+語言評量、
+中文素養與大專語文教育。
 
-      <div class="about-card">
+</p>
 
-        <div class="dr">
-          Dr.
-        </div>
+<p>
 
-        <h3>
-          Se-Hsing Cheng
-        </h3>
+近年持續探索生成式AI、
+數位工具與創新評量融入語文課程，
+並透過地方敘事、
+虎尾溪文學獎與學生創作，
+將語文教育延伸至公共人文實踐。
 
-        <div class="cn">
-          鄭色幸
-        </div>
+</p>
 
-        <div class="position">
-          Assistant Professor-level Contract Faculty<br>
-          Language Teaching Center<br>
-          National Formosa University
-        </div>
-
-      </div>
-
-
-      <div class="about-text">
-
-        <p>
-          我的專業歷程以語文教育為核心。
-          早期深耕華語文教學、海外華文教師研習、
-          華語文師資培訓與語言評量，
-          並累積華語能力測驗命題與審題等專業經驗。
-        </p>
-
-        <p>
-          進入大專教育後，
-          專業重心逐步延伸至中文閱讀與寫作能力、
-          應用中文、中文素養評量與學生學習成效分析，
-          並持續將語文教學與科技應用結合。
-        </p>
-
-        <p>
-          近年特別關注AI融入語文教育，
-          包含生成式AI、任務導向學習、
-          創新評量與數位敘事等教學模式。
-        </p>
-
-        <p>
-          在課堂之外，
-          透過虎尾溪文學獎、地方敘事、
-          文學作品集編輯與學生創作指導，
-          將語文教育延伸至地方文化與公共人文實踐。
-        </p>
-
-        <p>
-          同時持續參與校園性別事件調查與相關專業服務，
-          形成語文教育之外的另一項專業實務領域。
-        </p>
-
-        <div class="about-note">
-          Language, literacy, technology and human stories.
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
 
-<section class="experience" id="experience">
+<!-- =========================
+     EXPERIENCE
+========================= -->
 
-  <div class="container">
+<section
+class="content-section"
+id="experience">
 
-    <div class="section-label">
-      Selected Experience
-    </div>
+<div class="content">
 
-    <h2 class="section-title">
-      代表性專業經歷
-    </h2>
+<div class="eyebrow">
+SELECTED EXPERIENCE
+</div>
 
-    <div class="gold-rule"></div>
+<h2>
+代表性專業經歷
+</h2>
 
+<p>
 
-    <div class="timeline">
+海外華文教師研習、
+華語文師資培訓、
+華語能力測驗命題與審題、
+中文素養與CWT研究、
+AI融入語文教學。
 
+</p>
 
-      <div class="timeline-item">
-
-        <div class="timeline-eyebrow">
-          CHINESE LANGUAGE EDUCATION
-        </div>
-
-        <h3>
-          海外華文教師研習與華語師資培訓
-        </h3>
-
-        <p>
-          曾參與海外華文教師專業研習，
-          並於大專校院華語文師資培訓課程教授詞彙教學、
-          教材教法與課程設計等內容。
-        </p>
-
-      </div>
-
-
-      <div class="timeline-item">
-
-        <div class="timeline-eyebrow">
-          LANGUAGE ASSESSMENT
-        </div>
-
-        <h3>
-          華語能力測驗命題與審題
-        </h3>
-
-        <p>
-          參與國家華語能力測驗之命題與審題工作，
-          累積語言測驗、試題設計與評量實務經驗。
-        </p>
-
-      </div>
-
-
-      <div class="timeline-item">
-
-        <div class="timeline-eyebrow">
-          CHINESE LITERACY
-        </div>
-
-        <h3>
-          中文素養與CWT研究
-        </h3>
-
-        <p>
-          以中文能力測驗與學生學習資料，
-          分析中文閱讀、寫作與素養能力之變遷與學習成效。
-        </p>
-
-      </div>
-
-
-      <div class="timeline-item">
-
-        <div class="timeline-eyebrow">
-          AI & EDUCATION
-        </div>
-
-        <h3>
-          AI融入語文教學
-        </h3>
-
-        <p>
-          將生成式AI、數位工具與任務導向設計融入語文課程，
-          探索科技支持下的語文學習與評量模式。
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
 
-<section class="projects" id="projects">
+<!-- =========================
+     PROJECTS
+========================= -->
 
-  <div class="container">
+<section
+class="content-section"
+id="projects">
 
-    <div class="section-label">
-      Featured Projects
-    </div>
+<div class="content">
 
-    <h2 class="section-title">
-      代表專案與文學實踐
-    </h2>
+<div class="eyebrow">
+PROJECTS
+</div>
 
-    <p class="section-intro">
-      將語文教育從課堂延伸至地方文化、文學實踐、
-      學生創作與公共敘事。
-    </p>
+<h2>
+地方敘事與文學實踐
+</h2>
 
+<p>
 
-    <div class="projects-grid">
+虎尾溪文學獎、
+地方文化書寫、
+作品集主編、
+學生創作與競賽指導，
+以及文學與教育推廣。
 
+</p>
 
-      <div class="project">
-
-        <div class="project-tag">
-          LITERARY PROJECT
-        </div>
-
-        <h3>
-          虎尾溪文學獎
-        </h3>
-
-        <p>
-          參與並統籌活動企劃、評審邀約、
-          文宣設計、流程規劃、典禮主持、
-          成果整理與推廣。
-        </p>
-
-      </div>
-
-
-      <div class="project">
-
-        <div class="project-tag">
-          PUBLICATION
-        </div>
-
-        <h3>
-          文學獎作品集
-        </h3>
-
-        <p>
-          得獎作品編修、評審講評整理、
-          出版校訂、版面溝通與作品集編輯統籌。
-        </p>
-
-      </div>
-
-
-      <div class="project">
-
-        <div class="project-tag">
-          STUDENT MENTORING
-        </div>
-
-        <h3>
-          學生創作與競賽指導
-        </h3>
-
-        <p>
-          指導學生參與散文、圖文創作、
-          地方書寫與相關競賽，
-          將課堂成果轉化為公開發表與實作成果。
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
 
-<section class="professional" id="professional">
+<!-- =========================
+     PROFESSIONAL
+========================= -->
 
-  <div class="container">
+<section
+class="content-section"
+id="professional">
 
-    <div class="section-label">
-      Professional Expertise
-    </div>
+<div class="content">
 
-    <h2 class="section-title">
-      專業實務
-    </h2>
+<div class="eyebrow">
+PROFESSIONAL EXPERTISE
+</div>
 
-    <div class="gold-rule"></div>
+<h2>
+性別平等與專業服務
+</h2>
 
+<p>
 
-    <div class="professional-grid">
+校園性別事件調查、
+性別平等教育專業訓練、
+調查委員服務、
+華語文專業評審、
+師資培訓與教育推廣。
 
+</p>
 
-      <div class="professional-box">
-
-        <h3>
-          Gender Equity & Investigation
-        </h3>
-
-        <div class="sub">
-          性別平等與調查專業
-        </div>
-
-        <ul>
-          <li>校園性別事件調查專業訓練</li>
-          <li>校園性別事件調查小組委員</li>
-          <li>校外校園性別事件調查委員</li>
-          <li>性別平等教育相關研習與專業服務</li>
-        </ul>
-
-      </div>
-
-
-      <div class="professional-box">
-
-        <h3>
-          Academic & Educational Service
-        </h3>
-
-        <div class="sub">
-          學術與教育專業服務
-        </div>
-
-        <ul>
-          <li>華語文師資培訓講師</li>
-          <li>華語能力測驗命題與審題</li>
-          <li>華語文教材與課程相關委員</li>
-          <li>華語文與教育相關評審</li>
-          <li>講座、工作坊與教育推廣</li>
-        </ul>
-
-      </div>
-
-
-    </div>
-
-  </div>
+</div>
 
 </section>
 
 
-<section class="contact" id="contact">
+<!-- =========================
+     CONTACT
+========================= -->
 
-  <div class="container">
+<section
+class="content-section"
+id="contact">
 
-    <div class="section-label">
-      Contact
-    </div>
+<div class="content">
 
-    <h2 class="contact-name">
-      Dr. Cheng
-    </h2>
+<div class="eyebrow">
+CONTACT
+</div>
 
-    <div class="contact-cn">
-      鄭色幸
-    </div>
+<h2>
+Dr. Cheng · 鄭色幸
+</h2>
 
-    <p class="contact-text">
-      Se-Hsing Cheng<br>
-      Language Teaching Center<br>
-      National Formosa University
-    </p>
+<p>
 
+Se-Hsing Cheng
+<br>
 
-    <div class="contact-actions">
+Language Teaching Center
+<br>
 
-      <a class="btn btn-primary"
-         href="mailto:YOUR-EMAIL@nfu.edu.tw">
-        Email
-      </a>
+National Formosa University
 
-      <a class="btn btn-secondary"
-         href="#">
-        Curriculum Vitae
-      </a>
+</p>
 
-    </div>
-
-  </div>
+</div>
 
 </section>
 
-
-<footer>
-  © 2026 Se-Hsing Cheng 鄭色幸 · Dr. Cheng
-</footer>
 
 </body>
 </html>
