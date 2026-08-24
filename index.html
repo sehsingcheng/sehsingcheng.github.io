@@ -52,12 +52,14 @@ header{
   display:flex;
   align-items:center;
   justify-content:space-between;
+  gap:32px;
 }
 
 .brand{
   display:flex;
   align-items:center;
   gap:16px;
+  flex-shrink:0;
 }
 
 .brand-cn{
@@ -81,21 +83,30 @@ header{
   font-size:25px;
   font-weight:700;
   color:#07345f;
+  white-space:nowrap;
 }
 
 .brand-en em{
   color:#c79a42;
 }
 
+
+/* 導覽列：單排 */
+
 nav{
   display:flex;
-  gap:30px;
+  align-items:center;
+  justify-content:flex-end;
+  gap:26px;
+  flex-wrap:nowrap;
+  white-space:nowrap;
 }
 
 nav a{
   color:#07345f;
-  font-size:14px;
+  font-size:16px;
   font-weight:700;
+  white-space:nowrap;
 }
 
 nav a:hover{
@@ -114,8 +125,8 @@ nav a:hover{
   background:
     radial-gradient(
       circle at 88% 20%,
-      rgba(199,154,66,.09),
-      transparent 27%
+      rgba(199,154,66,.075),
+      transparent 26%
     ),
     linear-gradient(
       110deg,
@@ -126,9 +137,9 @@ nav a:hover{
 }
 
 .hero-inner{
-  min-height:670px;
+  min-height:600px;
   display:grid;
-  grid-template-columns:42% 58%;
+  grid-template-columns:41% 59%;
   align-items:center;
   position:relative;
 }
@@ -140,24 +151,26 @@ nav a:hover{
 
 .hero-photo-side{
   position:relative;
-  height:590px;
+  height:535px;
 }
 
 .photo-frame{
   position:absolute;
-  left:18px;
-  bottom:48px;
+  left:24px;
+  bottom:42px;
 
-  width:395px;
-  height:480px;
+  width:355px;
+  height:430px;
 
   overflow:hidden;
   z-index:5;
 
-  border-radius:40% 40% 17% 17% / 14% 14% 9% 9%;
+  border-radius:
+    40% 40% 17% 17%
+    / 14% 14% 9% 9%;
 
   box-shadow:
-    0 22px 42px rgba(12,54,86,.09);
+    0 20px 38px rgba(12,54,86,.08);
 }
 
 .photo-frame img{
@@ -177,17 +190,17 @@ nav a:hover{
   background:
     linear-gradient(
       90deg,
-      rgba(248,251,253,.22),
+      rgba(248,251,253,.20),
       transparent 13%,
-      transparent 86%,
-      rgba(248,251,253,.28)
+      transparent 87%,
+      rgba(248,251,253,.26)
     ),
     linear-gradient(
       180deg,
-      rgba(248,251,253,.14),
+      rgba(248,251,253,.12),
       transparent 16%,
       transparent 88%,
-      rgba(248,251,253,.20)
+      rgba(248,251,253,.18)
     );
 
   pointer-events:none;
@@ -203,23 +216,23 @@ nav a:hover{
 }
 
 .ring.one{
-  width:485px;
-  height:485px;
+  width:435px;
+  height:435px;
 
-  left:-90px;
-  top:45px;
+  left:-78px;
+  top:42px;
 
-  border:1.4px solid rgba(199,154,66,.20);
+  border:1.3px solid rgba(199,154,66,.18);
 }
 
 .ring.two{
-  width:360px;
-  height:430px;
+  width:330px;
+  height:390px;
 
-  left:32px;
-  top:92px;
+  left:31px;
+  top:82px;
 
-  border:1px solid rgba(199,154,66,.09);
+  border:1px solid rgba(199,154,66,.07);
 
   transform:rotate(-14deg);
 }
@@ -234,75 +247,40 @@ nav a:hover{
   z-index:10;
 
   padding:
-    64px 0
-    105px
-    58px;
+    52px 0
+    92px
+    48px;
 }
 
 
-/* 主口號 */
+/* 主品牌句 */
 
-.hero-slogan{
+.brand-phrase{
   margin:0;
+
+  max-width:680px;
 
   color:#07345f;
 
   font-family:
-    "Noto Serif TC",
+    "DFKai-SB",
+    "BiauKai",
+    "標楷體",
     "Microsoft JhengHei",
     serif;
 
   font-size:
-    clamp(46px,4.6vw,68px);
+    clamp(38px,3.8vw,52px);
 
-  line-height:1.15;
+  font-weight:400;
 
-  font-weight:700;
+  line-height:1.5;
 
   letter-spacing:3px;
 }
 
-.hero-slogan .gold{
-  color:#c7942f;
-}
-
-
-/* 英文副標 */
-
-.hero-slogan-en{
-  margin-top:15px;
-
-  color:#74889a;
-
-  font-family:Georgia,serif;
-
-  font-size:11px;
-
-  font-weight:600;
-
-  letter-spacing:2.6px;
-}
-
-
-/* 品牌副句 */
-
-.brand-phrase{
-  margin-top:26px;
-
-  color:#0b4a78;
-
-  font-family:
-    "Noto Serif TC",
-    "Microsoft JhengHei",
-    serif;
-
-  font-size:21px;
-
-  font-weight:600;
-
-  letter-spacing:2px;
-
-  line-height:1.7;
+.brand-phrase .gold-word{
+  color:#c7952f;
 }
 
 
@@ -312,7 +290,7 @@ nav a:hover{
   width:72px;
   height:2px;
 
-  margin:21px 0 23px;
+  margin:24px 0 24px;
 
   background:#c79a42;
 }
@@ -336,7 +314,7 @@ nav a:hover{
 /* Tags */
 
 .tags{
-  margin-top:25px;
+  margin-top:24px;
 
   display:flex;
   flex-wrap:wrap;
@@ -366,13 +344,13 @@ nav a:hover{
   display:flex;
   gap:14px;
 
-  margin-top:30px;
+  margin-top:29px;
 }
 
 .button{
-  min-height:47px;
+  min-height:46px;
 
-  padding:0 25px;
+  padding:0 24px;
 
   display:inline-flex;
   align-items:center;
@@ -402,20 +380,20 @@ nav a:hover{
 .quill{
   position:absolute;
 
-  right:8px;
-  top:55px;
+  right:2px;
+  top:42px;
 
-  width:48px;
-  height:130px;
+  width:42px;
+  height:112px;
 
-  opacity:.24;
+  opacity:.18;
 
   transform:rotate(18deg);
 }
 
 .quill-feather{
-  width:43px;
-  height:105px;
+  width:38px;
+  height:92px;
 
   background:
     linear-gradient(
@@ -442,11 +420,11 @@ nav a:hover{
   content:"";
   position:absolute;
 
-  left:21px;
+  left:19px;
   top:4px;
 
   width:2px;
-  height:110px;
+  height:96px;
 
   background:#c79a42;
 }
@@ -459,13 +437,13 @@ nav a:hover{
 .ai-network{
   position:absolute;
 
-  right:82px;
-  top:58px;
+  right:65px;
+  top:44px;
 
-  width:92px;
-  height:75px;
+  width:76px;
+  height:62px;
 
-  opacity:.08;
+  opacity:.055;
 }
 
 
@@ -477,24 +455,24 @@ nav a:hover{
   position:absolute;
 
   left:18px;
-  bottom:40px;
+  bottom:34px;
 
-  width:105px;
-  height:100px;
+  width:95px;
+  height:90px;
 
   z-index:7;
 
-  opacity:.36;
+  opacity:.30;
 }
 
 .ginkgo-stem{
   position:absolute;
 
-  left:48px;
+  left:44px;
   bottom:0;
 
   width:2px;
-  height:76px;
+  height:68px;
 
   background:#c79a42;
 
@@ -508,11 +486,11 @@ nav a:hover{
 }
 
 .ginkgo-leaf.one{
-  width:42px;
-  height:35px;
+  width:38px;
+  height:31px;
 
-  left:27px;
-  top:13px;
+  left:24px;
+  top:12px;
 
   background:
     linear-gradient(
@@ -525,11 +503,11 @@ nav a:hover{
 }
 
 .ginkgo-leaf.two{
-  width:35px;
-  height:30px;
+  width:31px;
+  height:27px;
 
-  left:53px;
-  top:45px;
+  left:48px;
+  top:40px;
 
   background:#d2aa50;
 
@@ -544,13 +522,13 @@ nav a:hover{
 .landscape{
   position:absolute;
 
-  right:130px;
-  bottom:20px;
+  right:118px;
+  bottom:16px;
 
-  width:300px;
-  height:100px;
+  width:260px;
+  height:85px;
 
-  opacity:.04;
+  opacity:.035;
 
   z-index:1;
 }
@@ -568,13 +546,13 @@ nav a:hover{
 .book{
   position:absolute;
 
-  right:5px;
-  bottom:28px;
+  right:0;
+  bottom:20px;
 
-  width:145px;
-  height:67px;
+  width:126px;
+  height:58px;
 
-  opacity:.21;
+  opacity:.16;
 }
 
 .page{
@@ -583,12 +561,12 @@ nav a:hover{
   bottom:0;
 
   width:52%;
-  height:55px;
+  height:48px;
 
   background:rgba(255,255,255,.82);
 
   border:
-    1.2px solid rgba(18,75,115,.42);
+    1.1px solid rgba(18,75,115,.38);
 }
 
 .page.left{
@@ -616,7 +594,7 @@ nav a:hover{
   bottom:0;
 
   width:2px;
-  height:58px;
+  height:50px;
 
   background:#c79a42;
 }
@@ -631,15 +609,15 @@ nav a:hover{
 
   left:-5%;
   right:-5%;
-  bottom:-24px;
+  bottom:-28px;
 
-  height:112px;
+  height:100px;
 
   z-index:4;
 
   overflow:hidden;
 
-  opacity:.50;
+  opacity:.42;
 
   pointer-events:none;
 }
@@ -654,11 +632,11 @@ nav a:hover{
 }
 
 .wave.blue{
-  top:30px;
-  height:90px;
+  top:28px;
+  height:82px;
 
   border-top:
-    11px solid rgba(15,74,118,.30);
+    9px solid rgba(15,74,118,.28);
 
   transform:
     rotate(-1.5deg)
@@ -666,11 +644,11 @@ nav a:hover{
 }
 
 .wave.light{
-  top:48px;
-  height:80px;
+  top:45px;
+  height:72px;
 
   border-top:
-    6px solid rgba(106,158,193,.18);
+    5px solid rgba(106,158,193,.16);
 
   transform:
     rotate(1deg)
@@ -678,11 +656,11 @@ nav a:hover{
 }
 
 .wave.gold{
-  top:61px;
-  height:68px;
+  top:58px;
+  height:62px;
 
   border-top:
-    3px solid rgba(199,154,66,.35);
+    2.5px solid rgba(199,154,66,.30);
 
   transform:rotate(-1deg);
 }
@@ -817,23 +795,34 @@ footer{
    RESPONSIVE
 ========================= */
 
-@media(max-width:1050px){
+/* 稍窄桌面：仍維持導覽列單排 */
+@media(max-width:1100px){
+
+  nav{
+    gap:18px;
+  }
+
+  nav a{
+    font-size:14px;
+  }
 
   .photo-frame{
-    width:370px;
-    height:460px;
+    width:335px;
+    height:415px;
   }
 
   .hero-copy{
-    padding-left:45px;
+    padding-left:38px;
   }
 
-  .hero-slogan{
-    font-size:52px;
+  .brand-phrase{
+    font-size:40px;
   }
 
 }
 
+
+/* 手機 */
 @media(max-width:780px){
 
   nav{
@@ -847,32 +836,28 @@ footer{
 
   .hero-photo-side{
     width:100%;
-    height:475px;
+    height:445px;
   }
 
   .photo-frame{
     left:50%;
-
     transform:translateX(-50%);
 
-    width:340px;
-    height:425px;
+    width:320px;
+    height:400px;
   }
 
   .hero-copy{
     width:100%;
 
     padding:
-      25px 0
-      120px;
-  }
-
-  .hero-slogan{
-    font-size:45px;
+      20px 0
+      105px;
   }
 
   .brand-phrase{
-    font-size:18px;
+    font-size:36px;
+    line-height:1.55;
   }
 
   .expertise-grid,
@@ -922,7 +907,10 @@ footer{
 </header>
 
 
-<!-- HERO -->
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero" id="home">
 
@@ -963,6 +951,8 @@ footer{
     <div class="hero-copy">
 
 
+      <!-- AI NETWORK -->
+
       <svg
         class="ai-network"
         viewBox="0 0 160 120">
@@ -999,30 +989,21 @@ footer{
       </svg>
 
 
+      <!-- FEATHER -->
+
       <div class="quill">
         <div class="quill-feather"></div>
       </div>
 
 
-      <h1 class="hero-slogan">
+      <!-- CORE PHRASE -->
 
-        <span class="gold">專業</span>．熱忱．<span class="gold">創新</span>．關懷
+      <h1 class="brand-phrase">
+
+        以<span class="gold-word">文字</span>耕耘教育，<br>
+        以<span class="gold-word">教育</span>連結世界。
 
       </h1>
-
-
-      <div class="hero-slogan-en">
-
-        PROFESSIONALISM · PASSION · INNOVATION · CARE
-
-      </div>
-
-
-      <div class="brand-phrase">
-
-        以文字耕耘教育，以教育連結世界。
-
-      </div>
 
 
       <div class="gold-divider"></div>
@@ -1070,6 +1051,8 @@ footer{
       </div>
 
 
+      <!-- LANDSCAPE -->
+
       <div class="landscape">
 
         <svg viewBox="0 0 400 130">
@@ -1093,6 +1076,8 @@ footer{
       </div>
 
 
+      <!-- BOOK -->
+
       <div class="book">
 
         <span class="page left"></span>
@@ -1103,6 +1088,8 @@ footer{
     </div>
 
 
+
+    <!-- WAVES -->
 
     <div class="hero-waves">
 
@@ -1118,6 +1105,10 @@ footer{
 </section>
 
 
+
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section class="content" id="about">
 
@@ -1142,6 +1133,10 @@ footer{
 </section>
 
 
+
+<!-- =========================
+     EXPERTISE
+========================= -->
 
 <section
   class="content"
@@ -1199,6 +1194,10 @@ footer{
 
 
 
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
 <section class="content" id="experience">
 
   <div class="container">
@@ -1236,6 +1235,10 @@ footer{
 </section>
 
 
+
+<!-- =========================
+     PROJECTS
+========================= -->
 
 <section
   class="content"
@@ -1278,6 +1281,10 @@ footer{
 
 
 
+<!-- =========================
+     PROFESSIONAL
+========================= -->
+
 <section class="content" id="professional">
 
   <div class="container">
@@ -1300,6 +1307,10 @@ footer{
 </section>
 
 
+
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section class="content" id="contact">
 
@@ -1329,7 +1340,7 @@ footer{
 
 <footer>
 
-© 2026 Se-Hsing Cheng 鄭色幸 · Dr. Cheng
+© 2026 Se-Hsing Cheng 鄭色幸
 
 </footer>
 
