@@ -52,7 +52,7 @@ header{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:32px;
+  gap:28px;
 }
 
 .brand{
@@ -90,21 +90,18 @@ header{
   color:#c79a42;
 }
 
-
-/* 導覽列：單排 */
-
 nav{
   display:flex;
   align-items:center;
   justify-content:flex-end;
-  gap:26px;
+  gap:20px;
   flex-wrap:nowrap;
   white-space:nowrap;
 }
 
 nav a{
   color:#07345f;
-  font-size:16px;
+  font-size:14px;
   font-weight:700;
   white-space:nowrap;
 }
@@ -144,11 +141,6 @@ nav a:hover{
   position:relative;
 }
 
-
-/* =========================
-   LEFT PHOTO
-========================= */
-
 .hero-photo-side{
   position:relative;
   height:535px;
@@ -177,7 +169,6 @@ nav a:hover{
   width:100%;
   height:100%;
   display:block;
-
   object-fit:cover;
   object-position:60% center;
 }
@@ -206,9 +197,6 @@ nav a:hover{
   pointer-events:none;
 }
 
-
-/* 淡金圓弧 */
-
 .ring{
   position:absolute;
   border-radius:50%;
@@ -218,46 +206,31 @@ nav a:hover{
 .ring.one{
   width:435px;
   height:435px;
-
   left:-78px;
   top:42px;
-
   border:1.3px solid rgba(199,154,66,.18);
 }
 
 .ring.two{
   width:330px;
   height:390px;
-
   left:31px;
   top:82px;
-
   border:1px solid rgba(199,154,66,.07);
-
   transform:rotate(-14deg);
 }
-
-
-/* =========================
-   RIGHT CONTENT
-========================= */
 
 .hero-copy{
   position:relative;
   z-index:10;
-
   padding:
     52px 0
     92px
     48px;
 }
 
-
-/* 主品牌句 */
-
 .brand-phrase{
   margin:0;
-
   max-width:680px;
 
   color:#07345f;
@@ -273,9 +246,7 @@ nav a:hover{
     clamp(38px,3.8vw,52px);
 
   font-weight:400;
-
   line-height:1.5;
-
   letter-spacing:3px;
 }
 
@@ -283,79 +254,49 @@ nav a:hover{
   color:#c7952f;
 }
 
-
-/* 金色短線 */
-
 .gold-divider{
   width:72px;
   height:2px;
-
-  margin:24px 0 24px;
-
+  margin:24px 0;
   background:#c79a42;
 }
 
-
-/* 專業介紹 */
-
 .intro{
   max-width:610px;
-
   margin:0;
-
   color:#395b73;
-
   font-size:16px;
-
   line-height:2;
 }
 
-
-/* Tags */
-
 .tags{
   margin-top:24px;
-
   display:flex;
   flex-wrap:wrap;
-
   gap:9px;
 }
 
 .tags span{
   padding:8px 15px;
-
-  border:
-    1px solid rgba(199,154,66,.48);
-
+  border:1px solid rgba(199,154,66,.48);
   border-radius:30px;
-
   background:rgba(255,255,255,.70);
-
   color:#07345f;
-
   font-size:13px;
 }
-
-
-/* Buttons */
 
 .hero-actions{
   display:flex;
   gap:14px;
-
   margin-top:29px;
 }
 
 .button{
   min-height:46px;
-
   padding:0 24px;
-
   display:inline-flex;
   align-items:center;
   justify-content:center;
-
   font-size:14px;
   font-weight:700;
 }
@@ -374,20 +315,16 @@ nav a:hover{
 
 
 /* =========================
-   FEATHER
+   DECORATIVE ELEMENTS
 ========================= */
 
 .quill{
   position:absolute;
-
   right:2px;
   top:42px;
-
   width:42px;
   height:112px;
-
   opacity:.18;
-
   transform:rotate(18deg);
 }
 
@@ -419,76 +356,50 @@ nav a:hover{
 .quill-feather::after{
   content:"";
   position:absolute;
-
   left:19px;
   top:4px;
-
   width:2px;
   height:96px;
-
   background:#c79a42;
 }
 
-
-/* =========================
-   AI NETWORK
-========================= */
-
 .ai-network{
   position:absolute;
-
   right:65px;
   top:44px;
-
   width:76px;
   height:62px;
-
   opacity:.055;
 }
 
-
-/* =========================
-   GINKGO
-========================= */
-
 .ginkgo{
   position:absolute;
-
   left:18px;
   bottom:34px;
-
   width:95px;
   height:90px;
-
   z-index:7;
-
   opacity:.30;
 }
 
 .ginkgo-stem{
   position:absolute;
-
   left:44px;
   bottom:0;
-
   width:2px;
   height:68px;
-
   background:#c79a42;
-
   transform:rotate(24deg);
 }
 
 .ginkgo-leaf{
   position:absolute;
-
   border-radius:80% 15% 72% 22%;
 }
 
 .ginkgo-leaf.one{
   width:38px;
   height:31px;
-
   left:24px;
   top:12px;
 
@@ -505,31 +416,19 @@ nav a:hover{
 .ginkgo-leaf.two{
   width:31px;
   height:27px;
-
   left:48px;
   top:40px;
-
   background:#d2aa50;
-
   transform:rotate(31deg);
 }
 
-
-/* =========================
-   LOCAL LANDSCAPE
-========================= */
-
 .landscape{
   position:absolute;
-
   right:118px;
   bottom:16px;
-
   width:260px;
   height:85px;
-
   opacity:.035;
-
   z-index:1;
 }
 
@@ -538,106 +437,69 @@ nav a:hover{
   height:100%;
 }
 
-
-/* =========================
-   OPEN BOOK
-========================= */
-
 .book{
   position:absolute;
-
   right:0;
   bottom:20px;
-
   width:126px;
   height:58px;
-
   opacity:.16;
 }
 
 .page{
   position:absolute;
-
   bottom:0;
-
   width:52%;
   height:48px;
-
   background:rgba(255,255,255,.82);
-
-  border:
-    1.1px solid rgba(18,75,115,.38);
+  border:1.1px solid rgba(18,75,115,.38);
 }
 
 .page.left{
   left:0;
-
   border-radius:75% 14% 8% 18%;
-
   transform:rotate(-7deg);
 }
 
 .page.right{
   right:0;
-
   border-radius:14% 75% 18% 8%;
-
   transform:rotate(7deg);
 }
 
 .book::after{
   content:"";
-
   position:absolute;
-
   left:50%;
   bottom:0;
-
   width:2px;
   height:50px;
-
   background:#c79a42;
 }
 
-
-/* =========================
-   BLUE GOLD WAVES
-========================= */
-
 .hero-waves{
   position:absolute;
-
   left:-5%;
   right:-5%;
   bottom:-28px;
-
   height:100px;
-
   z-index:4;
-
   overflow:hidden;
-
   opacity:.42;
-
   pointer-events:none;
 }
 
 .wave{
   position:absolute;
-
   width:112%;
   left:-5%;
-
   border-radius:50%;
 }
 
 .wave.blue{
   top:28px;
   height:82px;
-
-  border-top:
-    9px solid rgba(15,74,118,.28);
-
+  border-top:9px solid rgba(15,74,118,.28);
   transform:
     rotate(-1.5deg)
     skewX(-12deg);
@@ -646,10 +508,7 @@ nav a:hover{
 .wave.light{
   top:45px;
   height:72px;
-
-  border-top:
-    5px solid rgba(106,158,193,.16);
-
+  border-top:5px solid rgba(106,158,193,.16);
   transform:
     rotate(1deg)
     skewX(11deg);
@@ -658,16 +517,13 @@ nav a:hover{
 .wave.gold{
   top:58px;
   height:62px;
-
-  border-top:
-    2.5px solid rgba(199,154,66,.30);
-
+  border-top:2.5px solid rgba(199,154,66,.30);
   transform:rotate(-1deg);
 }
 
 
 /* =========================
-   CONTENT
+   GENERAL CONTENT
 ========================= */
 
 section.content{
@@ -683,11 +539,8 @@ section.content{
 
 .section-title{
   margin:10px 0 28px;
-
   color:#07345f;
-
   font-family:Georgia,serif;
-
   font-size:38px;
 }
 
@@ -697,7 +550,59 @@ section.content{
 }
 
 
-/* EXPERTISE */
+/* =========================
+   PROFILE
+========================= */
+
+.profile-grid{
+  display:grid;
+  grid-template-columns:34% 66%;
+  gap:45px;
+  align-items:start;
+}
+
+.profile-card{
+  padding:30px;
+  background:
+    linear-gradient(
+      145deg,
+      #f8fbfd,
+      #fffdf8
+    );
+  border-left:4px solid #c79a42;
+}
+
+.profile-label{
+  color:#c79a42;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:2px;
+  margin-bottom:8px;
+}
+
+.profile-card h3{
+  margin:0 0 10px;
+  color:#07345f;
+  font-size:22px;
+}
+
+.profile-card p{
+  margin:4px 0;
+  font-size:14px;
+}
+
+.profile-text{
+  padding-top:8px;
+}
+
+.profile-text p{
+  margin-top:0;
+}
+
+
+/* =========================
+   EXPERTISE
+========================= */
 
 .expertise-grid{
   display:grid;
@@ -707,7 +612,6 @@ section.content{
 
 .expertise-item{
   min-height:185px;
-
   padding:25px 20px;
 
   background:
@@ -730,6 +634,7 @@ section.content{
 .expertise-item h3{
   color:#07345f;
   font-size:16px;
+  line-height:1.5;
 }
 
 .expertise-item p{
@@ -737,7 +642,9 @@ section.content{
 }
 
 
-/* CARDS */
+/* =========================
+   EXPERIENCE / PROJECTS
+========================= */
 
 .cards{
   display:grid;
@@ -748,24 +655,98 @@ section.content{
 .card{
   padding:28px;
   min-height:170px;
-
   background:#f8fbfd;
-
   border-top:3px solid #c79a42;
 }
 
 .card h3{
   color:#07345f;
+  margin-top:0;
+}
+
+.card p{
+  font-size:14px;
 }
 
 
-/* CONTACT */
+/* =========================
+   CREDENTIALS
+========================= */
 
-.contact-box{
-  padding:45px;
+.credentials-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.credential-card{
+  display:flex;
+  gap:18px;
+  align-items:flex-start;
+
+  padding:24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f8fbfd
+    );
+
+  border:
+    1px solid rgba(15,65,100,.10);
+
+  border-radius:4px;
+}
+
+.credential-icon{
+  flex:0 0 48px;
+  width:48px;
+  height:48px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
 
   background:#07345f;
 
+  color:#fff;
+
+  font-family:Georgia,serif;
+  font-size:19px;
+  font-weight:700;
+}
+
+.credential-content h3{
+  margin:0 0 7px;
+  color:#07345f;
+  font-size:16px;
+  line-height:1.5;
+}
+
+.credential-meta{
+  color:#8291a0;
+  font-size:12px;
+  line-height:1.6;
+}
+
+.credential-note{
+  margin-top:8px;
+  color:#526c80;
+  font-size:13px;
+  line-height:1.7;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-box{
+  padding:45px;
+  background:#07345f;
   color:white;
 }
 
@@ -775,19 +756,16 @@ section.content{
 }
 
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
   padding:28px 0;
-
   text-align:center;
-
   color:#70869a;
-
   font-size:13px;
-
-  border-top:
-    1px solid rgba(199,154,66,.25);
+  border-top:1px solid rgba(199,154,66,.25);
 }
 
 
@@ -795,15 +773,14 @@ footer{
    RESPONSIVE
 ========================= */
 
-/* 稍窄桌面：仍維持導覽列單排 */
 @media(max-width:1100px){
 
   nav{
-    gap:18px;
+    gap:14px;
   }
 
   nav a{
-    font-size:14px;
+    font-size:13px;
   }
 
   .photo-frame{
@@ -819,10 +796,12 @@ footer{
     font-size:40px;
   }
 
+  .expertise-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
 }
 
-
-/* 手機 */
 @media(max-width:780px){
 
   nav{
@@ -842,14 +821,12 @@ footer{
   .photo-frame{
     left:50%;
     transform:translateX(-50%);
-
     width:320px;
     height:400px;
   }
 
   .hero-copy{
     width:100%;
-
     padding:
       20px 0
       105px;
@@ -860,6 +837,11 @@ footer{
     line-height:1.55;
   }
 
+  .profile-grid{
+    grid-template-columns:1fr;
+  }
+
+  .credentials-grid,
   .expertise-grid,
   .cards{
     grid-template-columns:1fr;
@@ -894,9 +876,10 @@ footer{
 
 
     <nav>
-      <a href="#about">About</a>
+      <a href="#profile">Profile</a>
       <a href="#expertise">Expertise</a>
       <a href="#experience">Experience</a>
+      <a href="#credentials">Credentials</a>
       <a href="#projects">Projects</a>
       <a href="#professional">Professional Practice</a>
       <a href="#contact">Contact</a>
@@ -908,22 +891,16 @@ footer{
 
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
   <div class="container hero-inner">
 
-
-    <!-- LEFT PHOTO -->
-
     <div class="hero-photo-side">
 
       <div class="ring one"></div>
       <div class="ring two"></div>
-
 
       <div class="photo-frame">
 
@@ -932,7 +909,6 @@ footer{
           alt="Se-Hsing Cheng 鄭色幸">
 
       </div>
-
 
       <div class="ginkgo">
 
@@ -945,13 +921,7 @@ footer{
     </div>
 
 
-
-    <!-- RIGHT -->
-
     <div class="hero-copy">
-
-
-      <!-- AI NETWORK -->
 
       <svg
         class="ai-network"
@@ -973,30 +943,13 @@ footer{
 
         </g>
 
-        <g fill="#c79a42">
-
-          <circle cx="23" cy="48" r="4"/>
-          <circle cx="52" cy="23" r="4"/>
-          <circle cx="87" cy="18" r="4"/>
-          <circle cx="126" cy="41" r="4"/>
-          <circle cx="140" cy="76" r="4"/>
-          <circle cx="111" cy="104" r="4"/>
-          <circle cx="73" cy="108" r="4"/>
-          <circle cx="39" cy="82" r="4"/>
-
-        </g>
-
       </svg>
 
-
-      <!-- FEATHER -->
 
       <div class="quill">
         <div class="quill-feather"></div>
       </div>
 
-
-      <!-- CORE PHRASE -->
 
       <h1 class="brand-phrase">
 
@@ -1032,26 +985,16 @@ footer{
 
       <div class="hero-actions">
 
-        <a
-          href="#expertise"
-          class="button primary">
-
+        <a href="#expertise" class="button primary">
           Explore My Work
-
         </a>
 
-        <a
-          href="#contact"
-          class="button secondary">
-
+        <a href="#contact" class="button secondary">
           Contact
-
         </a>
 
       </div>
 
-
-      <!-- LANDSCAPE -->
 
       <div class="landscape">
 
@@ -1076,8 +1019,6 @@ footer{
       </div>
 
 
-      <!-- BOOK -->
-
       <div class="book">
 
         <span class="page left"></span>
@@ -1088,9 +1029,6 @@ footer{
     </div>
 
 
-
-    <!-- WAVES -->
-
     <div class="hero-waves">
 
       <span class="wave blue"></span>
@@ -1099,34 +1037,70 @@ footer{
 
     </div>
 
-
   </div>
 
 </section>
 
 
 
-<!-- =========================
-     ABOUT
-========================= -->
+<!-- PROFILE -->
 
-<section class="content" id="about">
+<section class="content" id="profile">
 
   <div class="container">
 
     <div class="section-kicker">
-      ABOUT
+      PROFILE
     </div>
 
     <h2 class="section-title">
-      About Dr. Cheng
+      Profile
     </h2>
 
-    <p>
-      以語文教育為核心，結合教學、評量、研究與專業實踐，
-      關注語言能力、中文素養、人工智慧融入教育，
-      以及人文與地方敘事的跨域發展。
-    </p>
+
+    <div class="profile-grid">
+
+      <div class="profile-card">
+
+        <div class="profile-label">
+          CURRENT POSITION
+        </div>
+
+        <h3>
+          Dr. Cheng｜鄭色幸
+        </h3>
+
+        <p>
+          National Formosa University
+        </p>
+
+        <p>
+          Language Teaching Center
+        </p>
+
+        <p>
+          Assistant Professor-level Contract Faculty
+        </p>
+
+      </div>
+
+
+      <div class="profile-text">
+
+        <p>
+          以語文教育為核心，結合教學、評量、研究與專業實踐，
+          長期關注華語文教學、中文素養、語言評量與教育創新，
+          並延伸至地方敘事、文學實踐與性別平等專業。
+        </p>
+
+        <p>
+          教學與研究關注語言能力如何被培養、理解與評量，
+          並持續探索人工智慧、人文教育與真實社會情境之間的連結。
+        </p>
+
+      </div>
+
+    </div>
 
   </div>
 
@@ -1134,9 +1108,7 @@ footer{
 
 
 
-<!-- =========================
-     EXPERTISE
-========================= -->
+<!-- EXPERTISE -->
 
 <section
   class="content"
@@ -1194,9 +1166,7 @@ footer{
 
 
 
-<!-- =========================
-     EXPERIENCE
-========================= -->
+<!-- EXPERIENCE -->
 
 <section class="content" id="experience">
 
@@ -1215,17 +1185,23 @@ footer{
 
       <div class="card">
         <h3>Language Education</h3>
-        <p>語文教學、華語文教育、師資培育、課程設計與學生學習支持。</p>
+        <p>
+          語文教學、華語文教育、師資培育、課程設計與學生學習支持。
+        </p>
       </div>
 
       <div class="card">
         <h3>Assessment</h3>
-        <p>語言能力評量、中文素養評量、試題與學習成效分析。</p>
+        <p>
+          語言能力評量、中文素養評量、試題與學習成效分析。
+        </p>
       </div>
 
       <div class="card">
         <h3>Educational Innovation</h3>
-        <p>AI融入語文教育、數位工具與創新教學實踐。</p>
+        <p>
+          AI融入語文教育、數位工具與創新教學實踐。
+        </p>
       </div>
 
     </div>
@@ -1236,14 +1212,180 @@ footer{
 
 
 
-<!-- =========================
-     PROJECTS
-========================= -->
+<!-- CREDENTIALS -->
 
 <section
   class="content"
-  id="projects"
+  id="credentials"
   style="background:#f8fbfd;">
+
+  <div class="container">
+
+    <div class="section-kicker">
+      CREDENTIALS
+    </div>
+
+    <h2 class="section-title">
+      Credentials & Professional Qualifications
+    </h2>
+
+
+    <div class="credentials-grid">
+
+
+      <div class="credential-card">
+
+        <div class="credential-icon">
+          中
+        </div>
+
+        <div class="credential-content">
+
+          <h3>
+            教育部對外華語教學能力認證
+          </h3>
+
+          <div class="credential-meta">
+            中華民國教育部
+          </div>
+
+          <div class="credential-note">
+            華語文教學專業資格
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="credential-card">
+
+        <div class="credential-icon">
+          EMI
+        </div>
+
+        <div class="credential-content">
+
+          <h3>
+            Certificate in EMI Skills
+          </h3>
+
+          <div class="credential-meta">
+            Cambridge
+          </div>
+
+          <div class="credential-note">
+            English-Medium Instruction professional training
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="credential-card">
+
+        <div class="credential-icon">
+          EMI
+        </div>
+
+        <div class="credential-content">
+
+          <h3>
+            EMI 精進教學課程結業
+          </h3>
+
+          <div class="credential-meta">
+            EMI professional development
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="credential-card">
+
+        <div class="credential-icon">
+          AI
+        </div>
+
+        <div class="credential-content">
+
+          <h3>
+            生成式AI能力認證
+          </h3>
+
+          <div class="credential-meta">
+            資策會
+          </div>
+
+          <div class="credential-note">
+            Generative AI competency certification
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="credential-card">
+
+        <div class="credential-icon">
+          閩
+        </div>
+
+        <div class="credential-content">
+
+          <h3>
+            閩南語語言能力認證
+          </h3>
+
+          <div class="credential-meta">
+            中級
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="credential-card">
+
+        <div class="credential-icon">
+          性平
+        </div>
+
+        <div class="credential-content">
+
+          <h3>
+            校園性別事件調查專業訓練
+          </h3>
+
+          <div class="credential-meta">
+            初階｜進階｜高階
+          </div>
+
+          <div class="credential-note">
+            校園性侵害、性騷擾或性霸凌調查相關專業培訓
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- PROJECTS -->
+
+<section class="content" id="projects">
 
   <div class="container">
 
@@ -1260,17 +1402,23 @@ footer{
 
       <div class="card">
         <h3>Chinese Literacy</h3>
-        <p>中文閱讀、寫作與語文能力提升之教學與研究實踐。</p>
+        <p>
+          中文閱讀、寫作與語文能力提升之教學與研究實踐。
+        </p>
       </div>
 
       <div class="card">
         <h3>Local Narrative</h3>
-        <p>地方文化、文學創作、敘事教育與學生實作。</p>
+        <p>
+          地方文化、文學創作、敘事教育與學生實作。
+        </p>
       </div>
 
       <div class="card">
         <h3>AI & Language</h3>
-        <p>探索生成式AI與語文教學、學習設計及素養教育的結合。</p>
+        <p>
+          探索生成式AI與語文教學、學習設計及素養教育的結合。
+        </p>
       </div>
 
     </div>
@@ -1281,11 +1429,12 @@ footer{
 
 
 
-<!-- =========================
-     PROFESSIONAL
-========================= -->
+<!-- PROFESSIONAL -->
 
-<section class="content" id="professional">
+<section
+  class="content"
+  id="professional"
+  style="background:#f8fbfd;">
 
   <div class="container">
 
@@ -1308,9 +1457,7 @@ footer{
 
 
 
-<!-- =========================
-     CONTACT
-========================= -->
+<!-- CONTACT -->
 
 <section class="content" id="contact">
 
