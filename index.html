@@ -52,7 +52,7 @@ header{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:28px;
+  gap:24px;
 }
 
 .brand{
@@ -94,14 +94,14 @@ nav{
   display:flex;
   align-items:center;
   justify-content:flex-end;
-  gap:18px;
+  gap:14px;
   flex-wrap:nowrap;
   white-space:nowrap;
 }
 
 nav a{
   color:#07345f;
-  font-size:14px;
+  font-size:13px;
   font-weight:700;
   white-space:nowrap;
 }
@@ -320,7 +320,7 @@ nav a:hover{
 
 
 /* =========================
-   DECORATIVE ELEMENTS
+   DECORATION
 ========================= */
 
 .quill{
@@ -407,14 +407,7 @@ nav a:hover{
   height:31px;
   left:24px;
   top:12px;
-
-  background:
-    linear-gradient(
-      135deg,
-      #0b4e7d,
-      #c79a42
-    );
-
+  background:linear-gradient(135deg,#0b4e7d,#c79a42);
   transform:rotate(-20deg);
 }
 
@@ -505,18 +498,14 @@ nav a:hover{
   top:28px;
   height:82px;
   border-top:9px solid rgba(15,74,118,.28);
-  transform:
-    rotate(-1.5deg)
-    skewX(-12deg);
+  transform:rotate(-1.5deg) skewX(-12deg);
 }
 
 .wave.light{
   top:45px;
   height:72px;
   border-top:5px solid rgba(106,158,193,.16);
-  transform:
-    rotate(1deg)
-    skewX(11deg);
+  transform:rotate(1deg) skewX(11deg);
 }
 
 .wave.gold{
@@ -587,9 +576,6 @@ section.content{
   margin-bottom:18px;
 }
 
-
-/* 中英並排 */
-
 .profile-bilingual{
   display:grid;
   grid-template-columns:1fr 1.35fr;
@@ -658,8 +644,7 @@ section.content{
       #fffdf8
     );
 
-  border:
-    1px solid rgba(15,65,100,.08);
+  border:1px solid rgba(15,65,100,.08);
 }
 
 .number{
@@ -680,7 +665,7 @@ section.content{
 
 
 /* =========================
-   EXPERIENCE / PROJECTS
+   CARDS
 ========================= */
 
 .cards{
@@ -730,9 +715,7 @@ section.content{
       #f8fbfd
     );
 
-  border:
-    1px solid rgba(15,65,100,.10);
-
+  border:1px solid rgba(15,65,100,.10);
   border-radius:4px;
 }
 
@@ -746,13 +729,11 @@ section.content{
   justify-content:center;
 
   border-radius:50%;
-
   background:#07345f;
-
   color:#fff;
 
   font-family:Georgia,serif;
-  font-size:17px;
+  font-size:16px;
   font-weight:700;
 }
 
@@ -769,11 +750,180 @@ section.content{
   line-height:1.6;
 }
 
+.credential-level{
+  margin-top:7px;
+  color:#c79a42;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
 .credential-note{
   margin-top:8px;
   color:#526c80;
   font-size:13px;
   line-height:1.7;
+}
+
+
+/* =========================
+   PUBLICATIONS
+========================= */
+
+.publication-subtitle{
+  margin-top:-18px !important;
+  margin-bottom:34px !important;
+
+  color:#7a8d9d !important;
+
+  font-family:Georgia,serif;
+  font-size:14px;
+  letter-spacing:1.2px;
+}
+
+.publication-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+}
+
+.publication-card{
+  display:flex;
+  gap:25px;
+  align-items:center;
+
+  padding:28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f8fbfd
+    );
+
+  border:1px solid rgba(15,65,100,.10);
+  border-top:3px solid #c79a42;
+
+  box-shadow:
+    0 10px 30px rgba(7,52,95,.035);
+}
+
+.publication-cover-placeholder{
+  flex:0 0 110px;
+
+  width:110px;
+  height:150px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  position:relative;
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #07345f,
+      #0b4a78
+    );
+
+  color:#d9b25d;
+
+  font-family:Georgia,serif;
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+.publication-cover-placeholder::before{
+  content:"";
+  position:absolute;
+  width:110px;
+  height:110px;
+  left:-42px;
+  top:-35px;
+  border:1px solid rgba(215,173,86,.40);
+  border-radius:50%;
+}
+
+.publication-cover-placeholder::after{
+  content:"";
+  position:absolute;
+  width:120px;
+  height:2px;
+  right:-32px;
+  bottom:34px;
+  background:rgba(215,173,86,.45);
+  transform:rotate(-13deg);
+}
+
+.publication-content{
+  flex:1;
+}
+
+.publication-type{
+  margin-bottom:8px;
+  color:#c79a42;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+.publication-content h3{
+  margin:0 0 15px;
+
+  color:#07345f;
+
+  font-family:
+    "Noto Serif TC",
+    "Microsoft JhengHei",
+    serif;
+
+  font-size:19px;
+  line-height:1.6;
+}
+
+.publication-role{
+  margin:0 0 5px !important;
+  color:#385a72 !important;
+  font-size:14px;
+}
+
+.publication-meta{
+  margin:0 !important;
+  color:#8797a5 !important;
+  font-size:13px;
+}
+
+
+/* =========================
+   PROFESSIONAL
+========================= */
+
+.professional-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-top:28px;
+}
+
+.professional-item{
+  padding:26px;
+  background:#fff;
+  border:1px solid rgba(15,65,100,.08);
+  border-left:3px solid #c79a42;
+}
+
+.professional-item h3{
+  margin-top:0;
+  color:#07345f;
+  font-size:16px;
+}
+
+.professional-item p{
+  margin-bottom:0;
+  font-size:14px;
 }
 
 
@@ -859,11 +1009,11 @@ footer{
 @media(max-width:1100px){
 
   nav{
-    gap:12px;
+    gap:9px;
   }
 
   nav a{
-    font-size:12px;
+    font-size:11.5px;
   }
 
   .photo-frame{
@@ -936,9 +1086,15 @@ footer{
   }
 
   .credentials-grid,
+  .publication-grid,
   .expertise-grid,
-  .cards{
+  .cards,
+  .professional-grid{
     grid-template-columns:1fr;
+  }
+
+  .publication-card{
+    align-items:flex-start;
   }
 
 }
@@ -970,13 +1126,23 @@ footer{
 
 
     <nav>
+
       <a href="#profile">Profile</a>
+
       <a href="#expertise">Expertise</a>
+
       <a href="#experience">Experience</a>
+
       <a href="#credentials">Credentials</a>
+
+      <a href="#publications">Publications</a>
+
       <a href="#projects">Projects</a>
+
       <a href="#professional">Professional Practice</a>
+
       <a href="#contact">Contact</a>
+
     </nav>
 
   </div>
@@ -1004,6 +1170,7 @@ footer{
           alt="Se-Hsing Cheng 鄭色幸">
 
       </div>
+
 
       <div class="ginkgo">
 
@@ -1051,6 +1218,7 @@ footer{
       <h1 class="brand-phrase">
 
         以<span class="gold-word">文字</span>耕耘教育，<br>
+
         以<span class="gold-word">教育</span>連結世界。
 
       </h1>
@@ -1123,6 +1291,7 @@ footer{
 
       </div>
 
+
     </div>
 
 
@@ -1134,6 +1303,7 @@ footer{
       <span class="wave gold"></span>
 
     </div>
+
 
   </div>
 
@@ -1226,7 +1396,7 @@ footer{
         </p>
 
         <p>
-          在教學與研究中關注語言能力發展、理解與評量，
+          教學與研究關注語言能力如何被培養、理解與評量，
           並持續探索人工智慧、人文教育與真實社會情境之間的連結。
         </p>
 
@@ -1262,33 +1432,77 @@ footer{
     <div class="expertise-grid">
 
       <div class="expertise-item">
+
         <div class="number">01</div>
-        <h3>華語文教學與語言評量</h3>
-        <p>Chinese Language Education & Language Assessment</p>
+
+        <h3>
+          華語文教學與語言評量
+        </h3>
+
+        <p>
+          Chinese Language Education & Language Assessment
+        </p>
+
       </div>
 
+
       <div class="expertise-item">
+
         <div class="number">02</div>
-        <h3>中文素養與語文教育</h3>
-        <p>Chinese Literacy & Language Education</p>
+
+        <h3>
+          中文素養與語文教育
+        </h3>
+
+        <p>
+          Chinese Literacy & Language Education
+        </p>
+
       </div>
 
+
       <div class="expertise-item">
+
         <div class="number">03</div>
-        <h3>AI融入語文教育</h3>
-        <p>AI-enhanced Language Education</p>
+
+        <h3>
+          AI融入語文教育
+        </h3>
+
+        <p>
+          AI-enhanced Language Education
+        </p>
+
       </div>
 
+
       <div class="expertise-item">
+
         <div class="number">04</div>
-        <h3>地方敘事與文學實踐</h3>
-        <p>Local Narrative & Literary Practice</p>
+
+        <h3>
+          地方敘事與文學實踐
+        </h3>
+
+        <p>
+          Local Narrative & Literary Practice
+        </p>
+
       </div>
 
+
       <div class="expertise-item">
+
         <div class="number">05</div>
-        <h3>性別平等與調查專業</h3>
-        <p>Gender Equity & Investigation</p>
+
+        <h3>
+          性別平等與調查專業
+        </h3>
+
+        <p>
+          Gender Equity & Investigation
+        </p>
+
       </div>
 
     </div>
@@ -1400,15 +1614,15 @@ footer{
         <div class="credential-content">
 
           <h3>
-            Certificate in EMI Skills
+            Cambridge English Certificate in EMI Skills
           </h3>
 
           <div class="credential-meta">
-            Cambridge
+            Cambridge English
           </div>
 
           <div class="credential-note">
-            English-Medium Instruction professional training
+            English as a Medium of Instruction
           </div>
 
         </div>
@@ -1425,11 +1639,15 @@ footer{
         <div class="credential-content">
 
           <h3>
-            EMI 精進教學課程結業
+            English as a Medium of Instruction
           </h3>
 
           <div class="credential-meta">
-            EMI professional development
+            空中英語教室
+          </div>
+
+          <div class="credential-note">
+            EMI 教學專業培訓結業
           </div>
 
         </div>
@@ -1465,16 +1683,20 @@ footer{
       <div class="credential-card">
 
         <div class="credential-icon">
-          閩
+          台語
         </div>
 
         <div class="credential-content">
 
           <h3>
-            閩南語語言能力認證
+            台灣台語語言能力認證
           </h3>
 
           <div class="credential-meta">
+            中華民國教育部
+          </div>
+
+          <div class="credential-level">
             中級
           </div>
 
@@ -1492,10 +1714,14 @@ footer{
         <div class="credential-content">
 
           <h3>
-            校園性別事件調查專業訓練
+            校園性別事件專業調查委員
           </h3>
 
           <div class="credential-meta">
+            中華民國教育部
+          </div>
+
+          <div class="credential-level">
             初階｜進階｜高階
           </div>
 
@@ -1516,9 +1742,73 @@ footer{
 
 
 
+<!-- PUBLICATIONS -->
+
+<section class="content" id="publications">
+
+  <div class="container">
+
+    <div class="section-kicker">
+      PUBLICATIONS
+    </div>
+
+    <h2 class="section-title">
+      Publications
+    </h2>
+
+    <p class="publication-subtitle">
+      Books · Edited Volumes · Book Chapters
+    </p>
+
+
+    <div class="publication-grid">
+
+
+      <div class="publication-card">
+
+        <div class="publication-cover-placeholder">
+          BOOK
+        </div>
+
+
+        <div class="publication-content">
+
+          <div class="publication-type">
+            EDITED VOLUME
+          </div>
+
+          <h3>
+            《第十八屆虎尾溪文學獎作品集》
+          </h3>
+
+          <p class="publication-role">
+            主編
+          </p>
+
+          <p class="publication-meta">
+            2024
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
 <!-- PROJECTS -->
 
-<section class="content" id="projects">
+<section
+  class="content"
+  id="projects"
+  style="background:#f8fbfd;">
 
   <div class="container">
 
@@ -1564,10 +1854,7 @@ footer{
 
 <!-- PROFESSIONAL -->
 
-<section
-  class="content"
-  id="professional"
-  style="background:#f8fbfd;">
+<section class="content" id="professional">
 
   <div class="container">
 
@@ -1579,10 +1866,55 @@ footer{
       Professional Practice
     </h2>
 
+
     <p>
       專業實踐涵蓋語文教育、評量、文學與地方文化推廣、
       學生指導，以及性別平等與調查相關專業服務。
     </p>
+
+
+    <div class="professional-grid">
+
+      <div class="professional-item">
+
+        <h3>
+          Language & Education
+        </h3>
+
+        <p>
+          語文教育、華語文教學、語言評量與教育推廣。
+        </p>
+
+      </div>
+
+
+      <div class="professional-item">
+
+        <h3>
+          Literary & Local Practice
+        </h3>
+
+        <p>
+          文學活動、地方敘事、學生創作指導與文化實踐。
+        </p>
+
+      </div>
+
+
+      <div class="professional-item">
+
+        <h3>
+          Gender Equity
+        </h3>
+
+        <p>
+          性別平等教育與校園性別事件調查相關專業實務。
+        </p>
+
+      </div>
+
+
+    </div>
 
   </div>
 
@@ -1592,7 +1924,10 @@ footer{
 
 <!-- CONTACT -->
 
-<section class="content" id="contact">
+<section
+  class="content"
+  id="contact"
+  style="background:#f8fbfd;">
 
   <div class="container">
 
@@ -1607,14 +1942,17 @@ footer{
       </h2>
 
       <p>
-        Academic collaboration · Teaching · Research · Professional Practice
+        Academic Collaboration · Teaching · Research · Professional Practice
       </p>
 
       <p class="contact-email">
+
         Email：
+
         <a href="mailto:nikicheng@nfu.edu.tw">
           nikicheng@nfu.edu.tw
         </a>
+
       </p>
 
     </div>
@@ -1627,10 +1965,11 @@ footer{
 
 <footer>
 
-© 2026 Se-Hsing Cheng 鄭色幸 · Dr. Cheng
+  © 2026 Se-Hsing Cheng 鄭色幸 · Dr. Cheng
 
 </footer>
 
 
 </body>
+
 </html>
