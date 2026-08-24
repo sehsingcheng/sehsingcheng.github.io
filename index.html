@@ -94,7 +94,7 @@ nav{
   display:flex;
   align-items:center;
   justify-content:flex-end;
-  gap:20px;
+  gap:18px;
   flex-wrap:nowrap;
   white-space:nowrap;
 }
@@ -219,6 +219,11 @@ nav a:hover{
   border:1px solid rgba(199,154,66,.07);
   transform:rotate(-14deg);
 }
+
+
+/* =========================
+   HERO RIGHT
+========================= */
 
 .hero-copy{
   position:relative;
@@ -556,19 +561,21 @@ section.content{
 
 .profile-grid{
   display:grid;
-  grid-template-columns:34% 66%;
-  gap:45px;
+  grid-template-columns:40% 60%;
+  gap:48px;
   align-items:start;
 }
 
 .profile-card{
-  padding:30px;
+  padding:32px;
+
   background:
     linear-gradient(
       145deg,
       #f8fbfd,
       #fffdf8
     );
+
   border-left:4px solid #c79a42;
 }
 
@@ -577,22 +584,52 @@ section.content{
   font-size:12px;
   font-weight:700;
   letter-spacing:2px;
-  margin-bottom:8px;
+  margin-bottom:18px;
 }
 
-.profile-card h3{
-  margin:0 0 10px;
+
+/* 中英並排 */
+
+.profile-bilingual{
+  display:grid;
+  grid-template-columns:1fr 1.35fr;
+  gap:26px;
+  align-items:start;
+}
+
+.profile-zh{
+  padding-right:22px;
+  border-right:1px solid rgba(199,154,66,.32);
+}
+
+.profile-zh h3,
+.profile-en h3{
+  margin:0 0 14px;
   color:#07345f;
-  font-size:22px;
+  font-size:21px;
 }
 
-.profile-card p{
-  margin:4px 0;
+.profile-zh h3{
+  letter-spacing:2px;
+}
+
+.profile-en h3{
+  font-family:Georgia,serif;
+}
+
+.profile-zh p,
+.profile-en p{
+  margin:7px 0;
   font-size:14px;
+  line-height:1.7;
+}
+
+.profile-en p{
+  color:#60788d;
 }
 
 .profile-text{
-  padding-top:8px;
+  padding-top:4px;
 }
 
 .profile-text p{
@@ -715,7 +752,7 @@ section.content{
   color:#fff;
 
   font-family:Georgia,serif;
-  font-size:19px;
+  font-size:17px;
   font-weight:700;
 }
 
@@ -745,14 +782,60 @@ section.content{
 ========================= */
 
 .contact-box{
-  padding:45px;
-  background:#07345f;
+  padding:48px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #07345f,
+      #0b4a78
+    );
+
   color:white;
+
+  position:relative;
+  overflow:hidden;
 }
 
-.contact-box .section-title,
-.contact-box p{
+.contact-box::after{
+  content:"";
+  position:absolute;
+
+  width:240px;
+  height:240px;
+
+  right:-80px;
+  top:-100px;
+
+  border:1px solid rgba(199,154,66,.25);
+  border-radius:50%;
+}
+
+.contact-box .section-kicker{
+  color:#d7ad56;
+}
+
+.contact-box .section-title{
   color:white;
+  margin-bottom:14px;
+}
+
+.contact-box p{
+  color:rgba(255,255,255,.82);
+}
+
+.contact-email{
+  margin-top:22px !important;
+  font-size:17px;
+}
+
+.contact-email a{
+  color:#f1c36b;
+  font-weight:700;
+}
+
+.contact-email a:hover{
+  text-decoration:underline;
 }
 
 
@@ -776,11 +859,11 @@ footer{
 @media(max-width:1100px){
 
   nav{
-    gap:14px;
+    gap:12px;
   }
 
   nav a{
-    font-size:13px;
+    font-size:12px;
   }
 
   .photo-frame{
@@ -798,6 +881,10 @@ footer{
 
   .expertise-grid{
     grid-template-columns:repeat(2,1fr);
+  }
+
+  .profile-grid{
+    grid-template-columns:1fr;
   }
 
 }
@@ -837,8 +924,15 @@ footer{
     line-height:1.55;
   }
 
-  .profile-grid{
+  .profile-bilingual{
     grid-template-columns:1fr;
+  }
+
+  .profile-zh{
+    border-right:0;
+    border-bottom:1px solid rgba(199,154,66,.32);
+    padding-right:0;
+    padding-bottom:18px;
   }
 
   .credentials-grid,
@@ -897,6 +991,7 @@ footer{
 
   <div class="container hero-inner">
 
+
     <div class="hero-photo-side">
 
       <div class="ring one"></div>
@@ -921,7 +1016,9 @@ footer{
     </div>
 
 
+
     <div class="hero-copy">
+
 
       <svg
         class="ai-network"
@@ -1029,6 +1126,7 @@ footer{
     </div>
 
 
+
     <div class="hero-waves">
 
       <span class="wave blue"></span>
@@ -1060,29 +1158,63 @@ footer{
 
     <div class="profile-grid">
 
+
       <div class="profile-card">
 
         <div class="profile-label">
           CURRENT POSITION
         </div>
 
-        <h3>
-          Dr. Cheng｜鄭色幸
-        </h3>
 
-        <p>
-          National Formosa University
-        </p>
+        <div class="profile-bilingual">
 
-        <p>
-          Language Teaching Center
-        </p>
 
-        <p>
-          Assistant Professor-level Contract Faculty
-        </p>
+          <div class="profile-zh">
+
+            <h3>
+              鄭色幸
+            </h3>
+
+            <p>
+              國立虎尾科技大學
+            </p>
+
+            <p>
+              語言教學中心
+            </p>
+
+            <p>
+              助理教授
+            </p>
+
+          </div>
+
+
+          <div class="profile-en">
+
+            <h3>
+              Se-Hsing Cheng
+            </h3>
+
+            <p>
+              National Formosa University
+            </p>
+
+            <p>
+              Language Teaching Center
+            </p>
+
+            <p>
+              Assistant Professor
+            </p>
+
+          </div>
+
+
+        </div>
 
       </div>
+
 
 
       <div class="profile-text">
@@ -1099,6 +1231,7 @@ footer{
         </p>
 
       </div>
+
 
     </div>
 
@@ -1470,11 +1603,18 @@ footer{
       </div>
 
       <h2 class="section-title">
-        Connect with Dr. Cheng
+        Contact Dr. Cheng
       </h2>
 
       <p>
         Academic collaboration · Teaching · Research · Professional Practice
+      </p>
+
+      <p class="contact-email">
+        Email：
+        <a href="mailto:nikicheng@nfu.edu.tw">
+          nikicheng@nfu.edu.tw
+        </a>
       </p>
 
     </div>
@@ -1487,7 +1627,7 @@ footer{
 
 <footer>
 
-© 2026 Se-Hsing Cheng 鄭色幸
+© 2026 Se-Hsing Cheng 鄭色幸 · Dr. Cheng
 
 </footer>
 
