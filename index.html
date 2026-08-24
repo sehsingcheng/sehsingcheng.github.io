@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,13 +19,9 @@ html{
 
 body{
   margin:0;
+  background:#fff;
   color:#123b5e;
-  background:#ffffff;
-  font-family:
-    "Noto Sans TC",
-    "Microsoft JhengHei",
-    Arial,
-    sans-serif;
+  font-family:"Microsoft JhengHei","Noto Sans TC",Arial,sans-serif;
 }
 
 a{
@@ -33,19 +30,19 @@ a{
 }
 
 .container{
-  width:min(1180px, calc(100% - 48px));
+  width:min(1180px,calc(100% - 48px));
   margin:auto;
 }
 
 
-/* ========================================
+/* =========================
    HEADER
-======================================== */
+========================= */
 
 header{
   height:84px;
-  background:rgba(255,255,255,.96);
-  border-bottom:1px solid rgba(199,154,66,.30);
+  background:rgba(255,255,255,.97);
+  border-bottom:1px solid rgba(199,154,66,.28);
   position:relative;
   z-index:50;
 }
@@ -64,16 +61,13 @@ header{
 }
 
 .brand-cn{
-  color:#07345f;
-  font-family:
-    "Noto Serif TC",
-    "Microsoft JhengHei",
-    serif;
-  font-weight:700;
-  font-size:18px;
-  line-height:1.08;
   writing-mode:vertical-rl;
+  color:#07345f;
+  font-family:serif;
+  font-size:18px;
+  font-weight:700;
   letter-spacing:2px;
+  line-height:1.05;
 }
 
 .brand-line{
@@ -84,26 +78,24 @@ header{
 
 .brand-en{
   font-family:Georgia,serif;
-  font-weight:700;
   font-size:25px;
+  font-weight:700;
   color:#07345f;
 }
 
 .brand-en em{
   color:#c79a42;
-  font-style:italic;
 }
 
 nav{
   display:flex;
   gap:30px;
-  align-items:center;
 }
 
 nav a{
+  color:#07345f;
   font-size:14px;
   font-weight:700;
-  color:#07345f;
 }
 
 nav a:hover{
@@ -111,9 +103,9 @@ nav a:hover{
 }
 
 
-/* ========================================
+/* =========================
    HERO
-======================================== */
+========================= */
 
 .hero{
   position:relative;
@@ -121,120 +113,446 @@ nav a:hover{
 
   background:
     radial-gradient(
-      circle at 88% 18%,
-      rgba(199,154,66,.08),
-      transparent 26%
+      circle at 88% 20%,
+      rgba(199,154,66,.09),
+      transparent 27%
     ),
     linear-gradient(
       110deg,
       #f8fbfd 0%,
-      #f3f8fb 53%,
+      #f3f8fb 56%,
       #fffdf8 100%
     );
 }
 
 .hero-inner{
-  position:relative;
-  min-height:680px;
+  min-height:670px;
   display:grid;
-  grid-template-columns:43% 57%;
+  grid-template-columns:42% 58%;
   align-items:center;
+  position:relative;
 }
 
 
-/* ========================================
-   LEFT — PHOTO
-======================================== */
+/* =========================
+   LEFT PHOTO
+========================= */
 
 .hero-photo-side{
   position:relative;
-  height:600px;
-}
-
-.gold-ring{
-  position:absolute;
-  border-radius:50%;
-  pointer-events:none;
-}
-
-.gold-ring.one{
-  width:500px;
-  height:500px;
-  left:-105px;
-  top:38px;
-  border:1.5px solid rgba(199,154,66,.21);
-}
-
-.gold-ring.two{
-  width:380px;
-  height:445px;
-  left:13px;
-  top:86px;
-  border:1px solid rgba(199,154,66,.08);
-  transform:rotate(-13deg);
+  height:590px;
 }
 
 .photo-frame{
   position:absolute;
-  left:0;
-  bottom:52px;
-  width:420px;
-  height:500px;
-  z-index:6;
-  overflow:hidden;
+  left:18px;
+  bottom:48px;
 
-  border-radius:
-    42% 42% 18% 18%
-    / 15% 15% 10% 10%;
+  width:395px;
+  height:480px;
+
+  overflow:hidden;
+  z-index:5;
+
+  border-radius:40% 40% 17% 17% / 14% 14% 9% 9%;
 
   box-shadow:
-    0 22px 40px rgba(20,59,88,.08);
+    0 22px 42px rgba(12,54,86,.09);
 }
 
 .photo-frame img{
   width:100%;
   height:100%;
-  object-fit:cover;
-  object-position:58% center;
   display:block;
+
+  object-fit:cover;
+  object-position:60% center;
 }
 
 .photo-frame::after{
   content:"";
   position:absolute;
   inset:0;
-  pointer-events:none;
 
   background:
     linear-gradient(
       90deg,
-      rgba(248,251,253,.16) 0%,
-      transparent 14%,
-      transparent 82%,
-      rgba(248,251,253,.30) 100%
+      rgba(248,251,253,.22),
+      transparent 13%,
+      transparent 86%,
+      rgba(248,251,253,.28)
     ),
     linear-gradient(
       180deg,
-      rgba(248,251,253,.14) 0%,
-      transparent 15%,
+      rgba(248,251,253,.14),
+      transparent 16%,
       transparent 88%,
-      rgba(248,251,253,.14) 100%
+      rgba(248,251,253,.20)
     );
+
+  pointer-events:none;
 }
 
 
-/* ========================================
-   LANDSCAPE
-======================================== */
+/* 淡金圓弧 */
+
+.ring{
+  position:absolute;
+  border-radius:50%;
+  pointer-events:none;
+}
+
+.ring.one{
+  width:485px;
+  height:485px;
+
+  left:-90px;
+  top:45px;
+
+  border:1.4px solid rgba(199,154,66,.20);
+}
+
+.ring.two{
+  width:360px;
+  height:430px;
+
+  left:32px;
+  top:92px;
+
+  border:1px solid rgba(199,154,66,.09);
+
+  transform:rotate(-14deg);
+}
+
+
+/* =========================
+   RIGHT CONTENT
+========================= */
+
+.hero-copy{
+  position:relative;
+  z-index:10;
+
+  padding:
+    64px 0
+    105px
+    58px;
+}
+
+
+/* 主口號 */
+
+.hero-slogan{
+  margin:0;
+
+  color:#07345f;
+
+  font-family:
+    "Noto Serif TC",
+    "Microsoft JhengHei",
+    serif;
+
+  font-size:
+    clamp(46px,4.6vw,68px);
+
+  line-height:1.15;
+
+  font-weight:700;
+
+  letter-spacing:3px;
+}
+
+.hero-slogan .gold{
+  color:#c7942f;
+}
+
+
+/* 英文副標 */
+
+.hero-slogan-en{
+  margin-top:15px;
+
+  color:#74889a;
+
+  font-family:Georgia,serif;
+
+  font-size:11px;
+
+  font-weight:600;
+
+  letter-spacing:2.6px;
+}
+
+
+/* 品牌副句 */
+
+.brand-phrase{
+  margin-top:26px;
+
+  color:#0b4a78;
+
+  font-family:
+    "Noto Serif TC",
+    "Microsoft JhengHei",
+    serif;
+
+  font-size:21px;
+
+  font-weight:600;
+
+  letter-spacing:2px;
+
+  line-height:1.7;
+}
+
+
+/* 金色短線 */
+
+.gold-divider{
+  width:72px;
+  height:2px;
+
+  margin:21px 0 23px;
+
+  background:#c79a42;
+}
+
+
+/* 專業介紹 */
+
+.intro{
+  max-width:610px;
+
+  margin:0;
+
+  color:#395b73;
+
+  font-size:16px;
+
+  line-height:2;
+}
+
+
+/* Tags */
+
+.tags{
+  margin-top:25px;
+
+  display:flex;
+  flex-wrap:wrap;
+
+  gap:9px;
+}
+
+.tags span{
+  padding:8px 15px;
+
+  border:
+    1px solid rgba(199,154,66,.48);
+
+  border-radius:30px;
+
+  background:rgba(255,255,255,.70);
+
+  color:#07345f;
+
+  font-size:13px;
+}
+
+
+/* Buttons */
+
+.hero-actions{
+  display:flex;
+  gap:14px;
+
+  margin-top:30px;
+}
+
+.button{
+  min-height:47px;
+
+  padding:0 25px;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:14px;
+  font-weight:700;
+}
+
+.primary{
+  background:#07345f;
+  color:white;
+  border:1px solid #07345f;
+}
+
+.secondary{
+  background:rgba(255,255,255,.78);
+  color:#07345f;
+  border:1px solid #c79a42;
+}
+
+
+/* =========================
+   FEATHER
+========================= */
+
+.quill{
+  position:absolute;
+
+  right:8px;
+  top:55px;
+
+  width:48px;
+  height:130px;
+
+  opacity:.24;
+
+  transform:rotate(18deg);
+}
+
+.quill-feather{
+  width:43px;
+  height:105px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #07345f,
+      #427fa6 65%,
+      #c79a42
+    );
+
+  clip-path:
+    polygon(
+      50% 0,
+      88% 11%,
+      100% 34%,
+      87% 65%,
+      55% 100%,
+      28% 80%,
+      4% 54%,
+      10% 25%
+    );
+}
+
+.quill-feather::after{
+  content:"";
+  position:absolute;
+
+  left:21px;
+  top:4px;
+
+  width:2px;
+  height:110px;
+
+  background:#c79a42;
+}
+
+
+/* =========================
+   AI NETWORK
+========================= */
+
+.ai-network{
+  position:absolute;
+
+  right:82px;
+  top:58px;
+
+  width:92px;
+  height:75px;
+
+  opacity:.08;
+}
+
+
+/* =========================
+   GINKGO
+========================= */
+
+.ginkgo{
+  position:absolute;
+
+  left:18px;
+  bottom:40px;
+
+  width:105px;
+  height:100px;
+
+  z-index:7;
+
+  opacity:.36;
+}
+
+.ginkgo-stem{
+  position:absolute;
+
+  left:48px;
+  bottom:0;
+
+  width:2px;
+  height:76px;
+
+  background:#c79a42;
+
+  transform:rotate(24deg);
+}
+
+.ginkgo-leaf{
+  position:absolute;
+
+  border-radius:80% 15% 72% 22%;
+}
+
+.ginkgo-leaf.one{
+  width:42px;
+  height:35px;
+
+  left:27px;
+  top:13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0b4e7d,
+      #c79a42
+    );
+
+  transform:rotate(-20deg);
+}
+
+.ginkgo-leaf.two{
+  width:35px;
+  height:30px;
+
+  left:53px;
+  top:45px;
+
+  background:#d2aa50;
+
+  transform:rotate(31deg);
+}
+
+
+/* =========================
+   LOCAL LANDSCAPE
+========================= */
 
 .landscape{
   position:absolute;
-  left:-20px;
-  bottom:33px;
-  width:350px;
-  height:145px;
-  z-index:2;
-  opacity:.055;
+
+  right:130px;
+  bottom:20px;
+
+  width:300px;
+  height:100px;
+
+  opacity:.04;
+
+  z-index:1;
 }
 
 .landscape svg{
@@ -243,389 +561,136 @@ nav a:hover{
 }
 
 
-/* ========================================
-   GINKGO
-======================================== */
-
-.ginkgo{
-  position:absolute;
-  z-index:8;
-  left:28px;
-  bottom:50px;
-  width:115px;
-  height:125px;
-  opacity:.52;
-  transform:scale(.72);
-  transform-origin:bottom left;
-}
-
-.ginkgo-stem{
-  position:absolute;
-  width:2px;
-  height:88px;
-  left:55px;
-  bottom:0;
-  background:#c79a42;
-  transform:rotate(23deg);
-}
-
-.ginkgo-leaf{
-  position:absolute;
-  width:47px;
-  height:39px;
-  border-radius:80% 15% 72% 22%;
-}
-
-.ginkgo-leaf.a{
-  left:34px;
-  top:17px;
-  background:
-    linear-gradient(
-      135deg,
-      #0c4e7e,
-      #c79a42
-    );
-  transform:rotate(-20deg);
-}
-
-.ginkgo-leaf.b{
-  left:59px;
-  top:48px;
-  width:40px;
-  height:34px;
-  background:
-    linear-gradient(
-      135deg,
-      #c79a42,
-      #e3c273
-    );
-  transform:rotate(31deg);
-}
-
-
-/* ========================================
-   RIGHT — COPY
-======================================== */
-
-.hero-copy{
-  position:relative;
-  z-index:10;
-  padding:
-    78px 0
-    115px
-    38px;
-}
-
-.kicker{
-  margin-bottom:14px;
-  color:#c79027;
-  font-size:13px;
-  font-weight:700;
-  letter-spacing:4.5px;
-}
-
-.hero-identity{
-  margin-bottom:18px;
-  color:#6a7f91;
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-  font-size:12px;
-  font-weight:600;
-  letter-spacing:2.5px;
-}
-
-.hero-slogan{
-  margin:0;
-  max-width:690px;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    serif;
-
-  font-size:
-    clamp(54px,5vw,76px);
-
-  line-height:1.04;
-  font-weight:700;
-  letter-spacing:-1.5px;
-  color:#07345f;
-}
-
-.hero-slogan span{
-  color:#c79a42;
-  font-style:italic;
-}
-
-.hero-slogan-cn{
-  margin-top:22px;
-  color:#07345f;
-
-  font-family:
-    "Noto Serif TC",
-    "Microsoft JhengHei",
-    serif;
-
-  font-size:20px;
-  font-weight:600;
-  letter-spacing:2px;
-}
-
-.gold-divider{
-  width:74px;
-  height:2px;
-  margin:22px 0 21px;
-  background:#c79a42;
-}
-
-.intro{
-  width:min(590px,100%);
-  margin:0;
-  color:#385a72;
-  font-size:16px;
-  line-height:1.95;
-}
-
-.tags{
-  margin-top:25px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:9px;
-}
-
-.tags span{
-  padding:8px 15px;
-  border:1px solid rgba(199,154,66,.52);
-  border-radius:30px;
-  background:rgba(255,255,255,.67);
-  color:#07345f;
-  font-size:13px;
-}
-
-.hero-actions{
-  display:flex;
-  gap:14px;
-  margin-top:32px;
-}
-
-.button{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:47px;
-  padding:0 25px;
-  font-weight:700;
-  font-size:14px;
-}
-
-.primary{
-  color:white;
-  background:#07345f;
-  border:1px solid #07345f;
-}
-
-.secondary{
-  color:#07345f;
-  background:rgba(255,255,255,.75);
-  border:1px solid #c79a42;
-}
-
-
-/* ========================================
-   FEATHER
-======================================== */
-
-.quill{
-  position:absolute;
-  right:-2px;
-  top:60px;
-  width:67px;
-  height:175px;
-  z-index:2;
-  opacity:.34;
-
-  transform:
-    scale(.68)
-    rotate(18deg);
-
-  transform-origin:top right;
-}
-
-.quill-body{
-  position:absolute;
-  width:52px;
-  height:132px;
-  left:4px;
-  top:0;
-
-  background:
-    linear-gradient(
-      145deg,
-      #07345f 0%,
-      #145c90 54%,
-      #07345f 78%,
-      #c79a42 100%
-    );
-
-  clip-path:
-    polygon(
-      50% 0,
-      88% 11%,
-      100% 32%,
-      90% 61%,
-      65% 88%,
-      47% 100%,
-      31% 80%,
-      8% 56%,
-      0 31%,
-      18% 10%
-    );
-}
-
-.quill-body::after{
-  content:"";
-  position:absolute;
-  left:25px;
-  top:4px;
-  width:2px;
-  height:125px;
-  background:#d4aa4a;
-}
-
-.quill-stem{
-  position:absolute;
-  width:4px;
-  height:66px;
-  left:34px;
-  top:116px;
-  background:#c79a42;
-  transform:rotate(5deg);
-}
-
-
-/* ========================================
-   AI NETWORK
-======================================== */
-
-.ai-network{
-  position:absolute;
-  right:67px;
-  top:77px;
-  width:105px;
-  height:84px;
-  z-index:1;
-  opacity:.11;
-}
-
-
-/* ========================================
+/* =========================
    OPEN BOOK
-======================================== */
+========================= */
 
 .book{
   position:absolute;
-  right:2px;
-  bottom:32px;
-  width:155px;
-  height:72px;
-  z-index:3;
-  opacity:.32;
+
+  right:5px;
+  bottom:28px;
+
+  width:145px;
+  height:67px;
+
+  opacity:.21;
 }
 
 .page{
   position:absolute;
+
   bottom:0;
+
   width:52%;
-  height:62px;
+  height:55px;
+
   background:rgba(255,255,255,.82);
-  border:1.3px solid rgba(19,78,119,.40);
+
+  border:
+    1.2px solid rgba(18,75,115,.42);
 }
 
 .page.left{
   left:0;
+
   border-radius:75% 14% 8% 18%;
+
   transform:rotate(-7deg);
 }
 
 .page.right{
   right:0;
+
   border-radius:14% 75% 18% 8%;
+
   transform:rotate(7deg);
 }
 
 .book::after{
   content:"";
+
   position:absolute;
+
   left:50%;
   bottom:0;
+
   width:2px;
-  height:65px;
+  height:58px;
+
   background:#c79a42;
 }
 
 
-/* ========================================
+/* =========================
    BLUE GOLD WAVES
-======================================== */
+========================= */
 
 .hero-waves{
   position:absolute;
+
   left:-5%;
   right:-5%;
-  bottom:-17px;
-  height:125px;
-  z-index:5;
-  pointer-events:none;
+  bottom:-24px;
+
+  height:112px;
+
+  z-index:4;
+
   overflow:hidden;
-  opacity:.72;
+
+  opacity:.50;
+
+  pointer-events:none;
 }
 
 .wave{
   position:absolute;
+
   width:112%;
   left:-5%;
+
   border-radius:50%;
 }
 
 .wave.blue{
-  top:26px;
-  height:120px;
-  border-top:13px solid rgba(17,80,127,.28);
+  top:30px;
+  height:90px;
+
+  border-top:
+    11px solid rgba(15,74,118,.30);
+
   transform:
     rotate(-1.5deg)
-    skewX(-14deg);
+    skewX(-12deg);
 }
 
 .wave.light{
-  top:47px;
-  height:95px;
-  border-top:8px solid rgba(105,159,195,.18);
+  top:48px;
+  height:80px;
+
+  border-top:
+    6px solid rgba(106,158,193,.18);
+
   transform:
-    rotate(1.3deg)
-    skewX(12deg);
+    rotate(1deg)
+    skewX(11deg);
 }
 
 .wave.gold{
-  top:63px;
-  height:72px;
-  border-top:4px solid rgba(199,154,66,.32);
-  transform:
-    rotate(-1deg)
-    skewX(-8deg);
-}
+  top:61px;
+  height:68px;
 
-.wave.gold-thin{
-  top:74px;
-  height:65px;
-  border-top:1.5px solid rgba(199,154,66,.44);
+  border-top:
+    3px solid rgba(199,154,66,.35);
+
+  transform:rotate(-1deg);
 }
 
 
-/* ========================================
-   CONTENT SECTIONS
-======================================== */
+/* =========================
+   CONTENT
+========================= */
 
 section.content{
   padding:88px 0;
@@ -640,8 +705,11 @@ section.content{
 
 .section-title{
   margin:10px 0 28px;
+
   color:#07345f;
+
   font-family:Georgia,serif;
+
   font-size:38px;
 }
 
@@ -650,32 +718,8 @@ section.content{
   line-height:1.9;
 }
 
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
 
-.card{
-  padding:28px;
-  background:#f8fbfd;
-  border-top:3px solid #c79a42;
-  min-height:170px;
-}
-
-.card h3{
-  color:#07345f;
-  margin-top:0;
-}
-
-.card p{
-  font-size:14px;
-}
-
-
-/* ========================================
-   EXPERTISE
-======================================== */
+/* EXPERTISE */
 
 .expertise-grid{
   display:grid;
@@ -685,6 +729,7 @@ section.content{
 
 .expertise-item{
   min-height:185px;
+
   padding:25px 20px;
 
   background:
@@ -707,7 +752,6 @@ section.content{
 .expertise-item h3{
   color:#07345f;
   font-size:16px;
-  line-height:1.5;
 }
 
 .expertise-item p{
@@ -715,13 +759,35 @@ section.content{
 }
 
 
-/* ========================================
-   CONTACT
-======================================== */
+/* CARDS */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card{
+  padding:28px;
+  min-height:170px;
+
+  background:#f8fbfd;
+
+  border-top:3px solid #c79a42;
+}
+
+.card h3{
+  color:#07345f;
+}
+
+
+/* CONTACT */
 
 .contact-box{
   padding:45px;
+
   background:#07345f;
+
   color:white;
 }
 
@@ -731,61 +797,44 @@ section.content{
 }
 
 
-/* ========================================
-   FOOTER
-======================================== */
+/* FOOTER */
 
 footer{
   padding:28px 0;
+
   text-align:center;
-  font-size:13px;
+
   color:#70869a;
-  border-top:1px solid rgba(199,154,66,.25);
+
+  font-size:13px;
+
+  border-top:
+    1px solid rgba(199,154,66,.25);
 }
 
 
-/* ========================================
+/* =========================
    RESPONSIVE
-======================================== */
+========================= */
 
-@media(max-width:1100px){
-
-  .hero-slogan{
-    font-size:58px;
-  }
+@media(max-width:1050px){
 
   .photo-frame{
-    width:390px;
-    height:475px;
+    width:370px;
+    height:460px;
   }
 
   .hero-copy{
-    padding-left:42px;
+    padding-left:45px;
   }
 
-}
-
-@media(max-width:1000px){
-
-  nav{
-    gap:16px;
-  }
-
-  .expertise-grid{
-    grid-template-columns:repeat(2,1fr);
+  .hero-slogan{
+    font-size:52px;
   }
 
 }
 
 @media(max-width:780px){
-
-  header{
-    height:auto;
-  }
-
-  .nav{
-    min-height:78px;
-  }
 
   nav{
     display:none;
@@ -794,93 +843,41 @@ footer{
   .hero-inner{
     display:flex;
     flex-direction:column;
-    min-height:auto;
   }
 
   .hero-photo-side{
     width:100%;
-    height:500px;
+    height:475px;
   }
 
   .photo-frame{
     left:50%;
-    transform:translateX(-50%);
-    width:350px;
-    height:440px;
-  }
 
-  .gold-ring.one{
-    left:50%;
     transform:translateX(-50%);
-    width:410px;
-    height:410px;
-  }
 
-  .gold-ring.two{
-    left:50%;
-    transform:
-      translateX(-50%)
-      rotate(-13deg);
+    width:340px;
+    height:425px;
   }
 
   .hero-copy{
     width:100%;
+
     padding:
-      30px 0
-      125px;
+      25px 0
+      120px;
   }
 
   .hero-slogan{
-    font-size:48px;
-    line-height:1.08;
+    font-size:45px;
   }
 
-  .hero-slogan-cn{
+  .brand-phrase{
     font-size:18px;
   }
 
-  .hero-identity{
-    font-size:11px;
-    letter-spacing:1.7px;
-  }
-
-  .quill,
-  .ai-network{
-    opacity:.15;
-  }
-
+  .expertise-grid,
   .cards{
     grid-template-columns:1fr;
-  }
-
-  .expertise-grid{
-    grid-template-columns:1fr;
-  }
-
-}
-
-@media(max-width:480px){
-
-  .container{
-    width:min(100% - 30px,1180px);
-  }
-
-  .photo-frame{
-    width:310px;
-    height:400px;
-  }
-
-  .hero-photo-side{
-    height:450px;
-  }
-
-  .hero-slogan{
-    font-size:43px;
-  }
-
-  .hero-actions{
-    flex-direction:column;
-    align-items:flex-start;
   }
 
 }
@@ -891,10 +888,6 @@ footer{
 
 <body>
 
-
-<!-- ========================================
-     HEADER
-======================================== -->
 
 <header>
 
@@ -916,19 +909,12 @@ footer{
 
 
     <nav>
-
       <a href="#about">About</a>
-
       <a href="#expertise">Expertise</a>
-
       <a href="#experience">Experience</a>
-
       <a href="#projects">Projects</a>
-
       <a href="#professional">Professional Practice</a>
-
       <a href="#contact">Contact</a>
-
     </nav>
 
   </div>
@@ -936,10 +922,7 @@ footer{
 </header>
 
 
-
-<!-- ========================================
-     HERO
-======================================== -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
@@ -950,9 +933,9 @@ footer{
 
     <div class="hero-photo-side">
 
-      <div class="gold-ring one"></div>
+      <div class="ring one"></div>
+      <div class="ring two"></div>
 
-      <div class="gold-ring two"></div>
 
       <div class="photo-frame">
 
@@ -966,40 +949,8 @@ footer{
       <div class="ginkgo">
 
         <span class="ginkgo-stem"></span>
-
-        <span class="ginkgo-leaf a"></span>
-
-        <span class="ginkgo-leaf b"></span>
-
-      </div>
-
-
-      <div class="landscape">
-
-        <svg viewBox="0 0 400 160">
-
-          <path
-            d="M0 125
-               L55 82
-               L95 108
-               L155 54
-               L215 112
-               L270 69
-               L335 112
-               L400 90
-               L400 160
-               L0 160 Z"
-            fill="#236b9b"/>
-
-          <path
-            d="M0 143
-               C85 113 125 165 205 132
-               C275 104 320 150 400 120"
-            fill="none"
-            stroke="#c79a42"
-            stroke-width="3"/>
-
-        </svg>
+        <span class="ginkgo-leaf one"></span>
+        <span class="ginkgo-leaf two"></span>
 
       </div>
 
@@ -1007,15 +958,14 @@ footer{
 
 
 
-    <!-- RIGHT CONTENT -->
+    <!-- RIGHT -->
 
     <div class="hero-copy">
 
 
       <svg
         class="ai-network"
-        viewBox="0 0 160 120"
-        aria-hidden="true">
+        viewBox="0 0 160 120">
 
         <g
           fill="none"
@@ -1030,11 +980,6 @@ footer{
           <line x1="111" y1="104" x2="73" y2="108"/>
           <line x1="73" y1="108" x2="39" y2="82"/>
           <line x1="39" y1="82" x2="23" y2="48"/>
-
-          <line x1="52" y1="23" x2="73" y2="108"/>
-          <line x1="87" y1="18" x2="111" y2="104"/>
-          <line x1="23" y1="48" x2="126" y2="41"/>
-          <line x1="39" y1="82" x2="140" y2="76"/>
 
         </g>
 
@@ -1055,40 +1000,27 @@ footer{
 
 
       <div class="quill">
-
-        <div class="quill-body"></div>
-
-        <div class="quill-stem"></div>
-
-      </div>
-
-
-      <div class="kicker">
-
-        LANGUAGE · EDUCATION · ASSESSMENT
-
-      </div>
-
-
-      <div class="hero-identity">
-
-        DR. CHENG · SE-HSING CHENG · 鄭色幸
-
+        <div class="quill-feather"></div>
       </div>
 
 
       <h1 class="hero-slogan">
 
-        <span>Language Shapes</span>
-        <br>
-        How We See the World.
+        <span class="gold">專業</span>．熱忱．<span class="gold">創新</span>．關懷
 
       </h1>
 
 
-      <div class="hero-slogan-cn">
+      <div class="hero-slogan-en">
 
-        語言，形塑我們理解世界的方式。
+        PROFESSIONALISM · PASSION · INNOVATION · CARE
+
+      </div>
+
+
+      <div class="brand-phrase">
+
+        以文字耕耘教育，以教育連結世界。
 
       </div>
 
@@ -1108,15 +1040,10 @@ footer{
       <div class="tags">
 
         <span>華語文教育</span>
-
         <span>語言評量</span>
-
         <span>中文素養</span>
-
         <span>AI語文教育</span>
-
         <span>地方敘事</span>
-
         <span>性別平等</span>
 
       </div>
@@ -1143,14 +1070,35 @@ footer{
       </div>
 
 
-      <div class="book">
+      <div class="landscape">
 
-        <span class="page left"></span>
+        <svg viewBox="0 0 400 130">
 
-        <span class="page right"></span>
+          <path
+            d="
+            M0 115
+            L55 78
+            L100 99
+            L160 57
+            L218 105
+            L280 70
+            L340 100
+            L400 78
+            L400 130
+            L0 130 Z"
+            fill="#236b9b"/>
+
+        </svg>
 
       </div>
 
+
+      <div class="book">
+
+        <span class="page left"></span>
+        <span class="page right"></span>
+
+      </div>
 
     </div>
 
@@ -1159,12 +1107,8 @@ footer{
     <div class="hero-waves">
 
       <span class="wave blue"></span>
-
       <span class="wave light"></span>
-
       <span class="wave gold"></span>
-
-      <span class="wave gold-thin"></span>
 
     </div>
 
@@ -1175,13 +1119,7 @@ footer{
 
 
 
-<!-- ========================================
-     ABOUT
-======================================== -->
-
-<section
-  class="content"
-  id="about">
+<section class="content" id="about">
 
   <div class="container">
 
@@ -1195,7 +1133,8 @@ footer{
 
     <p>
       以語文教育為核心，結合教學、評量、研究與專業實踐，
-      關注語言能力、中文素養、人工智慧融入教育，以及人文與地方敘事的跨域發展。
+      關注語言能力、中文素養、人工智慧融入教育，
+      以及人文與地方敘事的跨域發展。
     </p>
 
   </div>
@@ -1203,10 +1142,6 @@ footer{
 </section>
 
 
-
-<!-- ========================================
-     EXPERTISE
-======================================== -->
 
 <section
   class="content"
@@ -1226,81 +1161,35 @@ footer{
 
     <div class="expertise-grid">
 
-
       <div class="expertise-item">
-
         <div class="number">01</div>
-
-        <h3>
-          華語文教學與語言評量
-        </h3>
-
-        <p>
-          Chinese Language Education & Language Assessment
-        </p>
-
+        <h3>華語文教學與語言評量</h3>
+        <p>Chinese Language Education & Language Assessment</p>
       </div>
 
-
       <div class="expertise-item">
-
         <div class="number">02</div>
-
-        <h3>
-          中文素養與語文教育
-        </h3>
-
-        <p>
-          Chinese Literacy & Language Education
-        </p>
-
+        <h3>中文素養與語文教育</h3>
+        <p>Chinese Literacy & Language Education</p>
       </div>
 
-
       <div class="expertise-item">
-
         <div class="number">03</div>
-
-        <h3>
-          AI融入語文教育
-        </h3>
-
-        <p>
-          AI-enhanced Language Education
-        </p>
-
+        <h3>AI融入語文教育</h3>
+        <p>AI-enhanced Language Education</p>
       </div>
 
-
       <div class="expertise-item">
-
         <div class="number">04</div>
-
-        <h3>
-          地方敘事與文學實踐
-        </h3>
-
-        <p>
-          Local Narrative & Literary Practice
-        </p>
-
+        <h3>地方敘事與文學實踐</h3>
+        <p>Local Narrative & Literary Practice</p>
       </div>
-
 
       <div class="expertise-item">
-
         <div class="number">05</div>
-
-        <h3>
-          性別平等與調查專業
-        </h3>
-
-        <p>
-          Gender Equity & Investigation
-        </p>
-
+        <h3>性別平等與調查專業</h3>
+        <p>Gender Equity & Investigation</p>
       </div>
-
 
     </div>
 
@@ -1310,13 +1199,7 @@ footer{
 
 
 
-<!-- ========================================
-     EXPERIENCE
-======================================== -->
-
-<section
-  class="content"
-  id="experience">
+<section class="content" id="experience">
 
   <div class="container">
 
@@ -1332,41 +1215,18 @@ footer{
     <div class="cards">
 
       <div class="card">
-
-        <h3>
-          Language Education
-        </h3>
-
-        <p>
-          語文教學、華語文教育、師資培育、課程設計與學生學習支持。
-        </p>
-
+        <h3>Language Education</h3>
+        <p>語文教學、華語文教育、師資培育、課程設計與學生學習支持。</p>
       </div>
 
-
       <div class="card">
-
-        <h3>
-          Assessment
-        </h3>
-
-        <p>
-          語言能力評量、中文素養評量、試題與學習成效分析。
-        </p>
-
+        <h3>Assessment</h3>
+        <p>語言能力評量、中文素養評量、試題與學習成效分析。</p>
       </div>
 
-
       <div class="card">
-
-        <h3>
-          Educational Innovation
-        </h3>
-
-        <p>
-          AI融入語文教育、數位工具與創新教學實踐。
-        </p>
-
+        <h3>Educational Innovation</h3>
+        <p>AI融入語文教育、數位工具與創新教學實踐。</p>
       </div>
 
     </div>
@@ -1376,10 +1236,6 @@ footer{
 </section>
 
 
-
-<!-- ========================================
-     PROJECTS
-======================================== -->
 
 <section
   class="content"
@@ -1400,41 +1256,18 @@ footer{
     <div class="cards">
 
       <div class="card">
-
-        <h3>
-          Chinese Literacy
-        </h3>
-
-        <p>
-          中文閱讀、寫作與語文能力提升之教學與研究實踐。
-        </p>
-
+        <h3>Chinese Literacy</h3>
+        <p>中文閱讀、寫作與語文能力提升之教學與研究實踐。</p>
       </div>
 
-
       <div class="card">
-
-        <h3>
-          Local Narrative
-        </h3>
-
-        <p>
-          地方文化、文學創作、敘事教育與學生實作。
-        </p>
-
+        <h3>Local Narrative</h3>
+        <p>地方文化、文學創作、敘事教育與學生實作。</p>
       </div>
 
-
       <div class="card">
-
-        <h3>
-          AI & Language
-        </h3>
-
-        <p>
-          探索生成式AI與語文教學、學習設計及素養教育的結合。
-        </p>
-
+        <h3>AI & Language</h3>
+        <p>探索生成式AI與語文教學、學習設計及素養教育的結合。</p>
       </div>
 
     </div>
@@ -1445,13 +1278,7 @@ footer{
 
 
 
-<!-- ========================================
-     PROFESSIONAL
-======================================== -->
-
-<section
-  class="content"
-  id="professional">
+<section class="content" id="professional">
 
   <div class="container">
 
@@ -1474,13 +1301,7 @@ footer{
 
 
 
-<!-- ========================================
-     CONTACT
-======================================== -->
-
-<section
-  class="content"
-  id="contact">
+<section class="content" id="contact">
 
   <div class="container">
 
@@ -1508,7 +1329,7 @@ footer{
 
 <footer>
 
-  © 2026 Se-Hsing Cheng 鄭色幸 · Dr. Cheng
+© 2026 Se-Hsing Cheng 鄭色幸 · Dr. Cheng
 
 </footer>
 
